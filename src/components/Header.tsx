@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Leaf, Home, ArrowLeft } from 'lucide-react'
+import { Home, ArrowLeft } from 'lucide-react'
 
 export default function Header() {
   const location = useLocation()
@@ -12,7 +12,7 @@ export default function Header() {
           {!isHome && (
             <ArrowLeft className="w-5 h-5 text-primary group-hover:-translate-x-1 transition-transform" />
           )}
-          <Leaf className="w-7 h-7 text-primary animate-leaf-sway" />
+          <span className="text-xl">🌻</span>
           <span className="text-lg font-bold text-primary-dark">
             Hans' Wissenszentrum
           </span>
