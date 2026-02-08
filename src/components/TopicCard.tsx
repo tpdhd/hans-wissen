@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Lock } from 'lucide-react'
+import { Lock, Sparkles } from 'lucide-react'
 
 interface TopicCardProps {
   title: string
@@ -36,7 +36,8 @@ export default function TopicCard({ title, description, icon, to, disabled = fal
       <p className="text-sm text-text-light leading-relaxed">{description}</p>
       {disabled && (
         <span className="inline-block mt-3 text-xs bg-secondary px-3 py-1 rounded-full text-text-light">
-          Kommt bald ✨
+          <Sparkles className="w-3 h-3 inline mr-1" />
+          Kommt bald
         </span>
       )}
     </div>

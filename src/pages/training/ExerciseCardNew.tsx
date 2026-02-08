@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, BarChart3, CheckCircle, AlertTriangle, Lightbulb } from 'lucide-react'
 
 interface ExerciseCardNewProps {
   title: string
@@ -103,8 +103,9 @@ export default function ExerciseCardNew({
 
           {/* Sets */}
           <div className="bg-secondary/50 rounded-xl px-4 py-2.5">
-            <p className="text-sm font-medium text-text">
-              📊 <strong>Sätze & Wiederholungen:</strong> {sets}
+            <p className="text-sm font-medium text-text flex items-center gap-2">
+              <BarChart3 className="w-4 h-4 text-primary shrink-0" />
+              <span><strong>Sätze & Wiederholungen:</strong> {sets}</span>
             </p>
           </div>
 
@@ -117,15 +118,20 @@ export default function ExerciseCardNew({
                   : 'bg-orange-50 border border-orange-200 text-orange-700'
               }`}
             >
-              <span className="shrink-0">{safetyNote.type === 'safe' ? '✅' : '⚠️'}</span>
+              {safetyNote.type === 'safe' ? (
+                <CheckCircle className="w-4 h-4 shrink-0 mt-0.5" />
+              ) : (
+                <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5" />
+              )}
               <span>{safetyNote.text}</span>
             </div>
           )}
 
           {/* Tip */}
           {tip && (
-            <p className="text-xs text-text-light/70 italic">
-              💡 <strong>Tipp:</strong> {tip}
+            <p className="text-xs text-text-light/70 italic flex items-start gap-1.5">
+              <Lightbulb className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
+              <span><strong>Tipp:</strong> {tip}</span>
             </p>
           )}
         </div>

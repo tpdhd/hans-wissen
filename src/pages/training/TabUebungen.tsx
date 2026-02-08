@@ -1,4 +1,4 @@
-import { Dumbbell } from 'lucide-react'
+import { Dumbbell, Weight } from 'lucide-react'
 import SectionCard from '../../components/SectionCard'
 import ExerciseCardNew from './ExerciseCardNew'
 import FadeInSection from '../../components/FadeInSection'
@@ -203,29 +203,33 @@ export default function TabUebungen() {
           {/* Training type overview */}
           <div className="bg-bg rounded-xl border border-border overflow-hidden mb-6">
             <div className="px-4 py-3 bg-secondary/30 border-b border-border">
-              <h4 className="font-semibold text-text text-sm">🏋️ Was wirkt wie auf die Knochen?</h4>
+              <h4 className="font-semibold text-text text-sm flex items-center gap-2">
+                <Weight className="w-4 h-4 text-primary" />
+                Was wirkt wie auf die Knochen?
+              </h4>
             </div>
             <div className="p-4 space-y-2 text-sm">
-              <div className="flex items-center gap-2">
-                <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
-                <span><strong>Krafttraining mit Gewichten</strong> — stärkstes Signal</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-yellow-500">⭐⭐⭐⭐</span>
-                <span><strong>Bodyweight-Training</strong> — sehr guter Einstieg ✓</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-yellow-500">⭐⭐⭐⭐</span>
-                <span><strong>Walking mit Gewichtsweste</strong> — verstärkt dein Gehen</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-yellow-500">⭐⭐⭐</span>
-                <span><strong>Walking (dein Standard)</strong> — gut für Herz, leicht für Knochen</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-yellow-500">⭐</span>
-                <span><strong>Schwimmen / Radfahren</strong> — gut für Gelenke, nicht für Knochen</span>
-              </div>
+              {[
+                { level: 5, label: 'Krafttraining mit Gewichten', desc: 'stärkstes Signal' },
+                { level: 4, label: 'Bodyweight-Training', desc: 'sehr guter Einstieg' },
+                { level: 4, label: 'Walking mit Gewichtsweste', desc: 'verstärkt dein Gehen' },
+                { level: 3, label: 'Walking (dein Standard)', desc: 'gut für Herz, leicht für Knochen' },
+                { level: 1, label: 'Schwimmen / Radfahren', desc: 'gut für Gelenke, nicht für Knochen' },
+              ].map((item) => (
+                <div key={item.label} className="flex items-center gap-2">
+                  <div className="flex gap-0.5 shrink-0 w-20">
+                    {[1, 2, 3, 4, 5].map((n) => (
+                      <div
+                        key={n}
+                        className={`w-3.5 h-3.5 rounded-full ${
+                          n <= item.level ? 'bg-primary' : 'bg-border'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  <span><strong>{item.label}</strong> — {item.desc}</span>
+                </div>
+              ))}
             </div>
           </div>
 

@@ -1,4 +1,4 @@
-import { Apple, Sparkles } from 'lucide-react'
+import { Apple, Sparkles, Bone, Sun, Heart, Star, Milk, MessageCircle, BarChart3 } from 'lucide-react'
 import MedTerm from '../../components/MedTerm'
 import SectionCard from '../../components/SectionCard'
 import Collapsible from '../../components/Collapsible'
@@ -43,7 +43,8 @@ export default function TabNahrung() {
             {/* Knochen-Trio */}
             <div className="mt-2">
               <h3 className="font-bold text-text text-lg mb-3 flex items-center gap-2">
-                🦴 Das „Knochen-Trio": D3 + K2 + Magnesium
+                <Bone className="w-5 h-5 text-primary" />
+                Das „Knochen-Trio": D3 + K2 + Magnesium
               </h3>
               <p className="mb-4">
                 Diese drei Nährstoffe arbeiten zusammen: Vitamin D3 → Kalzium aufnehmen.
@@ -54,7 +55,10 @@ export default function TabNahrung() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="bg-bg rounded-xl border border-border p-4">
-                <h4 className="font-semibold text-text">☀️ Vitamin D3</h4>
+                <h4 className="font-semibold text-text flex items-center gap-1.5">
+                  <Sun className="w-4 h-4 text-amber-500" />
+                  Vitamin D3
+                </h4>
                 <p className="text-sm text-primary font-medium mt-1">1.000–4.000 IE/Tag (nach Blutwert)</p>
                 <p className="text-xs text-text-light mt-1">
                   Essentiell für Kalzium-Aufnahme. ~60 % der Deutschen haben zu niedrige
@@ -62,17 +66,23 @@ export default function TabNahrung() {
                 </p>
               </div>
               <div className="bg-bg rounded-xl border border-border p-4">
-                <h4 className="font-semibold text-text">💚 Vitamin K2 (MK-7)</h4>
+                <h4 className="font-semibold text-text flex items-center gap-1.5">
+                  <Heart className="w-4 h-4 text-green-600" />
+                  Vitamin K2 (MK-7)
+                </h4>
                 <p className="text-sm text-primary font-medium mt-1">100–200 µg/Tag</p>
                 <p className="text-xs text-text-light mt-1">
                   Leitet Kalzium in die Knochen — und raus aus den Arterien.
                 </p>
-                <p className="text-xs text-accent font-medium mt-1">
-                  ⚠️ Bei Blutverdünnern (Marcumar/Warfarin) mit Arzt besprechen!
+                <p className="text-xs text-accent font-medium mt-1 flex items-center gap-1">
+                  Bei Blutverdünnern (Marcumar/Warfarin) mit Arzt besprechen!
                 </p>
               </div>
               <div className="bg-bg rounded-xl border border-border p-4">
-                <h4 className="font-semibold text-text">✨ Magnesium</h4>
+                <h4 className="font-semibold text-text flex items-center gap-1.5">
+                  <Star className="w-4 h-4 text-purple-500" />
+                  Magnesium
+                </h4>
                 <p className="text-sm text-primary font-medium mt-1">300–400 mg/Tag (Glycinat oder Citrat)</p>
                 <p className="text-xs text-text-light mt-1">
                   Wichtig für Knochen, Muskeln und Schlaf. Abends als Glycinat → fördert
@@ -80,7 +90,10 @@ export default function TabNahrung() {
                 </p>
               </div>
               <div className="bg-bg rounded-xl border border-border p-4">
-                <h4 className="font-semibold text-text">🥛 Kalzium</h4>
+                <h4 className="font-semibold text-text flex items-center gap-1.5">
+                  <Milk className="w-4 h-4 text-sky-500" />
+                  Kalzium
+                </h4>
                 <p className="text-sm text-primary font-medium mt-1">1.000–1.200 mg/Tag (über Ernährung!)</p>
                 <p className="text-xs text-text-light mt-1">
                   Am besten über Milchprodukte, grünes Gemüse, Mineralwasser.
@@ -113,7 +126,7 @@ export default function TabNahrung() {
               </div>
             </Collapsible>
 
-            <Collapsible title="📊 Supplement-Übersicht auf einen Blick">
+            <Collapsible title="Supplement-Übersicht auf einen Blick" icon={<BarChart3 className="w-5 h-5 text-primary" />}>
               <div className="overflow-x-auto">
                 <table className="w-full text-xs sm:text-sm">
                   <thead>
@@ -125,22 +138,23 @@ export default function TabNahrung() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-border/50">
-                    <tr><td className="py-2 pr-2 font-medium">Kreatin</td><td>⭐⭐⭐⭐⭐</td><td>3–5 g/Tag</td><td>5–10 €</td></tr>
-                    <tr><td className="py-2 pr-2 font-medium">Vitamin D3</td><td>⭐⭐⭐⭐⭐</td><td>1.000–4.000 IE</td><td>~5 €</td></tr>
-                    <tr><td className="py-2 pr-2 font-medium">Vitamin K2</td><td>⭐⭐⭐⭐</td><td>100–200 µg</td><td>~10 €</td></tr>
-                    <tr><td className="py-2 pr-2 font-medium">Magnesium</td><td>⭐⭐⭐⭐</td><td>300–400 mg</td><td>10–15 €</td></tr>
-                    <tr><td className="py-2 pr-2 font-medium">Omega-3</td><td>⭐⭐⭐⭐</td><td>2–3 g EPA+DHA</td><td>15–25 €</td></tr>
-                    <tr><td className="py-2 pr-2 font-medium">Kollagen</td><td>⭐⭐⭐</td><td>10–15 g</td><td>15–25 €</td></tr>
+                    <tr><td className="py-2 pr-2 font-medium">Kreatin</td><td><span className="text-primary">Sehr hoch</span></td><td>3–5 g/Tag</td><td>5–10 €</td></tr>
+                    <tr><td className="py-2 pr-2 font-medium">Vitamin D3</td><td><span className="text-primary">Sehr hoch</span></td><td>1.000–4.000 IE</td><td>~5 €</td></tr>
+                    <tr><td className="py-2 pr-2 font-medium">Vitamin K2</td><td><span className="text-primary">Hoch</span></td><td>100–200 µg</td><td>~10 €</td></tr>
+                    <tr><td className="py-2 pr-2 font-medium">Magnesium</td><td><span className="text-primary">Hoch</span></td><td>300–400 mg</td><td>10–15 €</td></tr>
+                    <tr><td className="py-2 pr-2 font-medium">Omega-3</td><td><span className="text-primary">Hoch</span></td><td>2–3 g EPA+DHA</td><td>15–25 €</td></tr>
+                    <tr><td className="py-2 pr-2 font-medium">Kollagen</td><td><span className="text-text-light">Mittel</span></td><td>10–15 g</td><td>15–25 €</td></tr>
                   </tbody>
                 </table>
               </div>
             </Collapsible>
 
             <div className="bg-secondary rounded-xl p-4 mt-4">
-              <p className="text-sm">
-                💬 <strong>Wichtig:</strong> Nahrungsergänzung ersetzt keine Ernährung —
+              <p className="text-sm flex items-start gap-2">
+                <MessageCircle className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                <span><strong>Wichtig:</strong> Nahrungsergänzung ersetzt keine Ernährung —
                 und kein Training! Sprich mit deinem Arzt, bevor du etwas Neues einnimmst.
-                Vitamin D3 unbedingt per Bluttest kontrollieren.
+                Vitamin D3 unbedingt per Bluttest kontrollieren.</span>
               </p>
             </div>
           </div>

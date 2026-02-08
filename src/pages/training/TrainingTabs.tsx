@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from 'react'
 export interface TabItem {
   id: string
   label: string
-  emoji: string
+  icon: React.ReactNode
   component: React.LazyExoticComponent<React.ComponentType> | React.ComponentType
 }
 
@@ -58,7 +58,7 @@ export default function TrainingTabs({ tabs }: TrainingTabsProps) {
                     : 'text-text-light hover:bg-secondary hover:text-text'
                 }`}
               >
-                <span className="text-base">{tab.emoji}</span>
+                <span className={activeTab === tab.id ? 'text-primary' : 'text-text-light'}>{tab.icon}</span>
                 <span className="hidden sm:inline">{tab.label}</span>
               </button>
             ))}

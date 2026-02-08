@@ -104,8 +104,9 @@ export default function TabRuecken() {
               <Collapsible title="Wann zum Arzt? — Warnsignale" icon={<AlertTriangle className="w-5 h-5 text-orange-500" />}>
                 <div className="space-y-4">
                   <div className="bg-red-50 border border-red-200 rounded-lg p-3">
-                    <p className="font-semibold text-red-700 text-sm mb-2">
-                      🚨 SOFORT zum Arzt / Notaufnahme:
+                    <p className="font-semibold text-red-700 text-sm mb-2 flex items-center gap-1.5">
+                      <AlertTriangle className="w-4 h-4" />
+                      SOFORT zum Arzt / Notaufnahme:
                     </p>
                     <ul className="text-sm space-y-1 text-red-700">
                       <li>• Kontrollverlust über Blase oder Darm (<MedTerm term="Cauda-equina-Syndrom">Cauda-equina-Syndrom</MedTerm> — Notfall!)</li>
@@ -115,8 +116,9 @@ export default function TabRuecken() {
                   </div>
 
                   <div className="bg-orange-50 border border-orange-200 rounded-lg p-3">
-                    <p className="font-semibold text-orange-700 text-sm mb-2">
-                      ⚠️ Zeitnah zum Arzt (innerhalb weniger Tage):
+                    <p className="font-semibold text-orange-700 text-sm mb-2 flex items-center gap-1.5">
+                      <AlertTriangle className="w-4 h-4" />
+                      Zeitnah zum Arzt (innerhalb weniger Tage):
                     </p>
                     <ul className="text-sm space-y-1 text-orange-700">
                       <li>• Schmerzen, die nach 6 Wochen nicht besser werden</li>
@@ -127,8 +129,9 @@ export default function TabRuecken() {
                   </div>
 
                   <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                    <p className="font-semibold text-green-700 text-sm mb-2">
-                      ✅ Normal und kein Grund zur Sorge:
+                    <p className="font-semibold text-green-700 text-sm mb-2 flex items-center gap-1.5">
+                      <CheckCircle className="w-4 h-4" />
+                      Normal und kein Grund zur Sorge:
                     </p>
                     <ul className="text-sm space-y-1 text-green-700">
                       <li>• Leichter Muskelkater nach Training (1–2 Tage)</li>

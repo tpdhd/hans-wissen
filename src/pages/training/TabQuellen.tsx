@@ -1,4 +1,4 @@
-import { BookOpen } from 'lucide-react'
+import { BookOpen, FlaskConical, Mic, Globe, MonitorPlay, Library } from 'lucide-react'
 import SectionCard from '../../components/SectionCard'
 import FadeInSection from '../../components/FadeInSection'
 
@@ -15,7 +15,10 @@ export default function TabQuellen() {
 
             {/* Studien */}
             <div>
-              <h3 className="font-semibold text-text text-base mb-3">🔬 Wissenschaftliche Studien</h3>
+              <h3 className="font-semibold text-text text-base mb-3 flex items-center gap-2">
+                <FlaskConical className="w-4 h-4 text-primary" />
+                Wissenschaftliche Studien
+              </h3>
               <ul className="text-sm space-y-2">
                 <li>
                   <a href="https://pubmed.ncbi.nlm.nih.gov/28975661/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
@@ -106,7 +109,10 @@ export default function TabQuellen() {
 
             {/* Podcasts */}
             <div>
-              <h3 className="font-semibold text-text text-base mb-3">🎙️ Podcast-Episoden</h3>
+              <h3 className="font-semibold text-text text-base mb-3 flex items-center gap-2">
+                <Mic className="w-4 h-4 text-primary" />
+                Podcast-Episoden
+              </h3>
               <ul className="text-sm space-y-2">
                 <li>
                   <a href="https://www.hubermanlab.com/episode/how-to-use-exercise-to-improve-your-brains-health-longevity-performance" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
@@ -139,7 +145,10 @@ export default function TabQuellen() {
 
             {/* Deutsche Quellen */}
             <div>
-              <h3 className="font-semibold text-text text-base mb-3">🇩🇪 Deutsche Quellen</h3>
+              <h3 className="font-semibold text-text text-base mb-3 flex items-center gap-2">
+                <Globe className="w-4 h-4 text-primary" />
+                Deutsche Quellen
+              </h3>
               <ul className="text-sm space-y-2">
                 <li>
                   <a href="https://www.aerzteblatt.de/archiv/7898/Praevention-und-Therapie-der-Osteoporose-Die-Bedeutung-des-Sports-und-der-koerperlichen-Aktivitaet" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
@@ -176,7 +185,10 @@ export default function TabQuellen() {
 
             {/* Videos */}
             <div>
-              <h3 className="font-semibold text-text text-base mb-3">📺 Videos zum Mitmachen</h3>
+              <h3 className="font-semibold text-text text-base mb-3 flex items-center gap-2">
+                <MonitorPlay className="w-4 h-4 text-primary" />
+                Videos zum Mitmachen
+              </h3>
               <ul className="text-sm space-y-2">
                 <li>
                   <a href="https://www.youtube.com/watch?v=RfgCOraYpzk" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
@@ -203,7 +215,10 @@ export default function TabQuellen() {
 
             {/* Bücher */}
             <div>
-              <h3 className="font-semibold text-text text-base mb-3">📚 Bücher</h3>
+              <h3 className="font-semibold text-text text-base mb-3 flex items-center gap-2">
+                <Library className="w-4 h-4 text-primary" />
+                Bücher
+              </h3>
               <ul className="text-sm space-y-2">
                 <li>
                   <strong>„Outlive: The Science and Art of Longevity"</strong> — Peter Attia

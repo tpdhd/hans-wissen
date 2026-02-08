@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom'
-import { Dumbbell, Pill, Smartphone, Brain, Lock } from 'lucide-react'
+import { Dumbbell, Pill, Smartphone, Brain, Lock, Sun } from 'lucide-react'
 
 interface DashboardCardProps {
   title: string
   subtitle: string
-  emoji: string
   icon: React.ReactNode
   to?: string
   disabled?: boolean
@@ -12,29 +11,26 @@ interface DashboardCardProps {
   iconBgClass: string
 }
 
-function DashboardCard({ title, subtitle, emoji, icon, to, disabled = false, bgClass, iconBgClass }: DashboardCardProps) {
+function DashboardCard({ title, subtitle, icon, to, disabled = false, bgClass, iconBgClass }: DashboardCardProps) {
   const card = (
     <div
-      className={`relative rounded-3xl p-4 flex flex-col justify-between h-full transition-all duration-300 ${bgClass} ${
+      className={`relative rounded-3xl p-5 flex flex-col justify-between h-full transition-all duration-300 ${bgClass} ${
         disabled
           ? 'opacity-55 cursor-not-allowed'
           : 'card-hover cursor-pointer animate-warm-glow'
       }`}
     >
       {disabled && (
-        <div className="absolute top-2.5 right-2.5 bg-white/60 backdrop-blur-sm rounded-full px-2 py-0.5 flex items-center gap-1">
+        <div className="absolute top-2.5 right-2.5 bg-white/60 backdrop-blur-sm rounded-full px-2.5 py-1 flex items-center gap-1">
           <Lock className="w-3 h-3 text-text-light/60" />
           <span className="text-[10px] font-bold text-text-light/70 uppercase tracking-wide">Bald</span>
         </div>
       )}
-      <div className={`w-9 h-9 rounded-xl flex items-center justify-center ${iconBgClass} mb-2`}>
+      <div className={`w-11 h-11 rounded-2xl flex items-center justify-center ${iconBgClass} mb-3 shadow-sm`}>
         {icon}
       </div>
       <div>
-        <div className="text-lg leading-tight mb-0.5">
-          <span className="mr-1">{emoji}</span>
-          <span className="font-extrabold text-text">{title}</span>
-        </div>
+        <h3 className="text-lg font-extrabold text-text leading-tight mb-0.5">{title}</h3>
         <p className="text-xs text-text-light/80 leading-snug">{subtitle}</p>
       </div>
     </div>
@@ -56,7 +52,9 @@ export default function Dashboard() {
       {/* Compact warm header */}
       <div className="text-center mb-3 shrink-0">
         <div className="flex items-center justify-center gap-2 mb-1">
-          <span className="text-2xl">🌻</span>
+          <div className="w-8 h-8 rounded-full bg-primary/15 flex items-center justify-center">
+            <Sun className="w-5 h-5 text-primary" />
+          </div>
           <h1 className="text-xl font-extrabold text-primary-dark tracking-tight">
             Hans' Wissenszentrum
           </h1>
@@ -71,7 +69,6 @@ export default function Dashboard() {
         <DashboardCard
           title="Fit & Stark"
           subtitle="Training & Übungen für jeden Tag"
-          emoji="💪"
           icon={<Dumbbell className="w-5 h-5 text-white" />}
           to="/training"
           bgClass="bg-gradient-to-br from-amber-50 to-orange-100 border-2 border-amber-200/60 shadow-md"
@@ -80,7 +77,6 @@ export default function Dashboard() {
         <DashboardCard
           title="Vitamine"
           subtitle="Nährstoffe & Ergänzung"
-          emoji="💊"
           icon={<Pill className="w-5 h-5 text-white/70" />}
           disabled
           bgClass="bg-gradient-to-br from-stone-50 to-stone-100 border border-stone-200/60"
@@ -89,7 +85,6 @@ export default function Dashboard() {
         <DashboardCard
           title="Technik"
           subtitle="Smartphone & Apps einfach erklärt"
-          emoji="📱"
           icon={<Smartphone className="w-5 h-5 text-white/70" />}
           disabled
           bgClass="bg-gradient-to-br from-stone-50 to-stone-100 border border-stone-200/60"
@@ -98,7 +93,6 @@ export default function Dashboard() {
         <DashboardCard
           title="Geistig fit"
           subtitle="Gedächtnis & mentale Fitness"
-          emoji="🧠"
           icon={<Brain className="w-5 h-5 text-white/70" />}
           disabled
           bgClass="bg-gradient-to-br from-stone-50 to-stone-100 border border-stone-200/60"
@@ -109,7 +103,7 @@ export default function Dashboard() {
       {/* Small motivational footer */}
       <div className="text-center py-2 shrink-0">
         <p className="text-xs text-text-light/60 italic">
-          „Wissen ist die beste Medizin" 🌿
+          „Wissen ist die beste Medizin"
         </p>
       </div>
     </div>

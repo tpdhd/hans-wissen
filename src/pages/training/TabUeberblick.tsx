@@ -7,6 +7,12 @@ import {
   Brain,
   Activity,
   Sparkles,
+  Dumbbell,
+  ClipboardList,
+  Calendar,
+  AlertTriangle,
+  Pill,
+  BookOpen,
 } from 'lucide-react'
 import SectionCard from '../../components/SectionCard'
 import BenefitCard from '../../components/BenefitCard'
@@ -22,7 +28,9 @@ export default function TabUeberblick() {
           <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-accent/10 blob-shape" />
 
           <div className="relative z-10">
-            <span className="inline-block text-4xl mb-3">💪</span>
+            <div className="w-12 h-12 rounded-2xl bg-primary/15 flex items-center justify-center mb-3">
+              <Dumbbell className="w-7 h-7 text-primary" />
+            </div>
             <h1 className="text-3xl md:text-4xl font-extrabold text-primary-dark mb-4">
               Krafttraining für Walkerinnen
             </h1>
@@ -101,18 +109,21 @@ export default function TabUeberblick() {
       {/* Quick overview of what's in the other tabs */}
       <FadeInSection>
         <div className="bg-white rounded-2xl border border-border shadow-sm p-6">
-          <h3 className="font-bold text-text text-lg mb-4">📑 Was dich hier erwartet</h3>
+          <h3 className="font-bold text-text text-lg mb-4 flex items-center gap-2">
+            <ClipboardList className="w-5 h-5 text-primary" />
+            Was dich hier erwartet
+          </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { emoji: '💪', title: 'Übungen', desc: '8 Bodyweight-Übungen mit Bildern und Anleitung' },
-              { emoji: '📅', title: 'Wochenplan', desc: 'Konkreter Plan — kombiniert mit deinem Walking' },
-              { emoji: '🦴', title: 'Knochen', desc: 'Warum Knochendichte so wichtig ist' },
-              { emoji: '⚠️', title: 'Rücken', desc: 'Sichere Übungen und was du vermeiden solltest' },
-              { emoji: '💊', title: 'Supplements', desc: 'Was wirklich hilft — evidenzbasiert' },
-              { emoji: '📚', title: 'Quellen', desc: 'Alle Studien und weiterführende Links' },
+              { icon: <Dumbbell className="w-5 h-5 text-primary" />, title: 'Übungen', desc: '8 Bodyweight-Übungen mit Bildern und Anleitung' },
+              { icon: <Calendar className="w-5 h-5 text-primary" />, title: 'Wochenplan', desc: 'Konkreter Plan — kombiniert mit deinem Walking' },
+              { icon: <Bone className="w-5 h-5 text-primary" />, title: 'Knochen', desc: 'Warum Knochendichte so wichtig ist' },
+              { icon: <AlertTriangle className="w-5 h-5 text-primary" />, title: 'Rücken', desc: 'Sichere Übungen und was du vermeiden solltest' },
+              { icon: <Pill className="w-5 h-5 text-primary" />, title: 'Supplements', desc: 'Was wirklich hilft — evidenzbasiert' },
+              { icon: <BookOpen className="w-5 h-5 text-primary" />, title: 'Quellen', desc: 'Alle Studien und weiterführende Links' },
             ].map((item) => (
               <div key={item.title} className="flex items-start gap-3 p-3 rounded-xl bg-secondary/30">
-                <span className="text-xl shrink-0">{item.emoji}</span>
+                <span className="shrink-0 mt-0.5">{item.icon}</span>
                 <div>
                   <p className="font-semibold text-text text-sm">{item.title}</p>
                   <p className="text-xs text-text-light">{item.desc}</p>

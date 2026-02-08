@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Home, ArrowLeft } from 'lucide-react'
+import { Home, ArrowLeft, Sun } from 'lucide-react'
 
 export default function Header() {
   const location = useLocation()
@@ -12,7 +12,7 @@ export default function Header() {
           {!isHome && (
             <ArrowLeft className="w-5 h-5 text-primary group-hover:-translate-x-1 transition-transform" />
           )}
-          <span className="text-xl">🌻</span>
+          <Sun className="w-5 h-5 text-primary" />
           <span className="text-lg font-bold text-primary-dark">
             Hans' Wissenszentrum
           </span>

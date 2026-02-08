@@ -1,4 +1,4 @@
-import { Calendar } from 'lucide-react'
+import { Calendar, Sprout, Dumbbell, Footprints, Leaf, Lightbulb } from 'lucide-react'
 import SectionCard from '../../components/SectionCard'
 import Collapsible from '../../components/Collapsible'
 import FadeInSection from '../../components/FadeInSection'
@@ -20,51 +20,66 @@ export default function TabWochenplan() {
 
           <div className="mb-6">
             <h3 className="font-semibold text-text mb-3 flex items-center gap-2">
-              <span className="text-lg">🌱</span> Monat 1–2: Sanfter Einstieg
+              <Sprout className="w-5 h-5 text-primary" />
+              Monat 1–2: Sanfter Einstieg
             </h3>
             <div className="grid grid-cols-1 gap-3">
               {[
                 {
                   day: 'Montag',
-                  activity: '🏋️ Kraft (20 Min) + 🚶 Spaziergang',
+                  icon: <Dumbbell className="w-4 h-4" />,
+                  activity: 'Kraft (20 Min) + Spaziergang',
                   detail: 'Kniebeugen, Beckenheben, seitl. Beinheben — dann gehen wie gewohnt',
                   color: 'bg-primary/10 border-primary/20',
+                  iconColor: 'text-primary',
                 },
                 {
                   day: 'Dienstag',
-                  activity: '🚶 Spaziergang wie gewohnt',
+                  icon: <Footprints className="w-4 h-4" />,
+                  activity: 'Spaziergang wie gewohnt',
                   detail: '1–2 Stunden zügiges Gehen (Zone 2)',
                   color: 'bg-accent/10 border-accent/20',
+                  iconColor: 'text-accent',
                 },
                 {
                   day: 'Mittwoch',
-                  activity: '🏋️ Kraft (20 Min) + 🚶 Spaziergang',
+                  icon: <Dumbbell className="w-4 h-4" />,
+                  activity: 'Kraft (20 Min) + Spaziergang',
                   detail: 'Liegestütze (Wand), Planke (Knie), Einbeinstand — dann gehen',
                   color: 'bg-primary/10 border-primary/20',
+                  iconColor: 'text-primary',
                 },
                 {
                   day: 'Donnerstag',
-                  activity: '🚶 Spaziergang wie gewohnt',
+                  icon: <Footprints className="w-4 h-4" />,
+                  activity: 'Spaziergang wie gewohnt',
                   detail: 'Vielleicht eine neue Route ausprobieren?',
                   color: 'bg-accent/10 border-accent/20',
+                  iconColor: 'text-accent',
                 },
                 {
                   day: 'Freitag',
-                  activity: '🏋️ Kraft (25 Min) + 🚶 Spaziergang',
+                  icon: <Dumbbell className="w-4 h-4" />,
+                  activity: 'Kraft (25 Min) + Spaziergang',
                   detail: 'Mix aus allen Übungen — Ganzkörper',
                   color: 'bg-primary/10 border-primary/20',
+                  iconColor: 'text-primary',
                 },
                 {
                   day: 'Samstag',
-                  activity: '🚶 Langer Spaziergang',
+                  icon: <Footprints className="w-4 h-4" />,
+                  activity: 'Langer Spaziergang',
                   detail: 'Extra-Runde an der frischen Luft',
                   color: 'bg-accent/10 border-accent/20',
+                  iconColor: 'text-accent',
                 },
                 {
                   day: 'Sonntag',
-                  activity: '🌿 Aktive Erholung',
+                  icon: <Leaf className="w-4 h-4" />,
+                  activity: 'Aktive Erholung',
                   detail: 'Leichter Spaziergang, Dehnen, Mobilisierung',
                   color: 'bg-secondary border-border',
+                  iconColor: 'text-text-light',
                 },
               ].map((item) => (
                 <div
@@ -73,6 +88,7 @@ export default function TabWochenplan() {
                 >
                   <div className="flex items-center gap-4">
                     <span className="font-semibold text-text w-28 shrink-0">{item.day}</span>
+                    <span className={`${item.iconColor} shrink-0`}>{item.icon}</span>
                     <span className="text-text font-medium text-sm">{item.activity}</span>
                   </div>
                   <p className="text-xs text-text-light mt-1 ml-32">{item.detail}</p>
@@ -82,10 +98,11 @@ export default function TabWochenplan() {
           </div>
 
           <div className="bg-primary/5 border border-primary/10 rounded-xl p-4 mb-6">
-            <p className="text-sm text-text-light">
-              💡 <strong>Reihenfolge:</strong> Mach das Krafttraining VOR dem Spaziergang.
+            <p className="text-sm text-text-light flex items-start gap-2">
+              <Lightbulb className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+              <span><strong>Reihenfolge:</strong> Mach das Krafttraining VOR dem Spaziergang.
               So bist du frisch und konzentriert für die Übungen, und der Spaziergang
-              danach dient als lockeres Cooldown.
+              danach dient als lockeres Cooldown.</span>
             </p>
           </div>
 

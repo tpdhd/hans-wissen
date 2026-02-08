@@ -1,4 +1,4 @@
-import { Bone } from 'lucide-react'
+import { Bone, BarChart3 } from 'lucide-react'
 import MedTerm from '../../components/MedTerm'
 import SectionCard from '../../components/SectionCard'
 import Collapsible from '../../components/Collapsible'
@@ -31,7 +31,10 @@ export default function TabKnochen() {
             {/* Comparison table */}
             <div className="bg-bg rounded-xl border border-border overflow-hidden mt-4">
               <div className="px-4 py-3 bg-secondary/30 border-b border-border">
-                <h4 className="font-semibold text-text text-sm">📊 Knochendichte: Mit vs. ohne Training</h4>
+                <h4 className="font-semibold text-text text-sm flex items-center gap-2">
+                  <BarChart3 className="w-4 h-4 text-primary" />
+                  Knochendichte: Mit vs. ohne Training
+                </h4>
               </div>
               <div className="p-4">
                 <div className="grid grid-cols-3 gap-2 text-xs sm:text-sm">
