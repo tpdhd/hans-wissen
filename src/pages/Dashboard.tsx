@@ -27,7 +27,7 @@ function DashboardCard({ title, subtitle, emoji, icon, to, disabled = false, bgC
           <span className="text-[10px] font-bold text-text-light/70 uppercase tracking-wide">Bald</span>
         </div>
       )}
-      <div className={`w-11 h-11 rounded-2xl flex items-center justify-center ${iconBgClass} mb-2`}>
+      <div className={`w-9 h-9 rounded-xl flex items-center justify-center ${iconBgClass} mb-2`}>
         {icon}
       </div>
       <div>
