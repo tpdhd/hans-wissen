@@ -1,0 +1,817 @@
+{
+  "statusGoals": [
+    {
+      "id": "pushups",
+      "name": "Push-ups (kontinuierlich)",
+      "category": "Kraft Oberkörper",
+      "unit": "Wiederholungen",
+      "thresholds": {
+        "male": {
+          "red": { "max": 10, "label": "Warnung" },
+          "yellow": { "min": 11, "max": 19, "label": "OK" },
+          "green": { "min": 20, "max": 29, "label": "Ziel" },
+          "gold": { "min": 30, "label": "Exzellent" }
+        },
+        "female": {
+          "red": { "max": 5, "label": "Warnung" },
+          "yellow": { "min": 6, "max": 9, "label": "OK" },
+          "green": { "min": 10, "max": 19, "label": "Ziel" },
+          "gold": { "min": 20, "label": "Exzellent" }
+        }
+      },
+      "rationale": "Harvard-Studie mit über 1.000 Feuerwehrmännern zeigte: Wer 40+ Push-ups schafft, hat 96% geringeres Risiko für kardiovaskuläre Ereignisse. Für 60+ sind 20-30 Push-ups ein exzellentes Ziel. Push-ups testen Oberkörperkraft, Core-Stabilität und muskuläre Ausdauer.",
+      "source": "Yang et al., JAMA Network Open 2019 | Peter Attia, Outlive (2023)",
+      "improvement": "3x pro Woche: Negative Push-ups, Wall Push-ups als Progression, Plank Holds zur Core-Stärkung"
+    },
+    {
+      "id": "deadHang",
+      "name": "Dead Hang",
+      "category": "Kraft Oberkörper & Griffkraft",
+      "unit": "Sekunden",
+      "thresholds": {
+        "male": {
+          "red": { "max": 10, "label": "Warnung" },
+          "yellow": { "min": 11, "max": 29, "label": "OK" },
+          "green": { "min": 30, "max": 59, "label": "Ziel" },
+          "gold": { "min": 60, "label": "Exzellent" }
+        },
+        "female": {
+          "red": { "max": 5, "label": "Warnung" },
+          "yellow": { "min": 6, "max": 19, "label": "OK" },
+          "green": { "min": 20, "max": 39, "label": "Ziel" },
+          "gold": { "min": 40, "label": "Exzellent" }
+        }
+      },
+      "rationale": "Dead Hang testet Griffkraft (Langlebigkeitsprediktor #1), Schulterstabilität und funktionelle Oberkörperkraft. 30-60 Sekunden sind für 60+ ein hervorragendes Ziel. Wichtig für Sturzprävention und Alltagsfunktion.",
+      "source": "Peter Attia's Centenarian Decathlon | AGEIST Fitness Benchmarks",
+      "improvement": "Tägliches Hängen: Start mit Füßen am Boden, progressive Überlast, Farmer's Carries für Griffkraft"
+    },
+    {
+      "id": "wallSit",
+      "name": "Wall Sit",
+      "category": "Kraft Unterkörper",
+      "unit": "Sekunden",
+      "thresholds": {
+        "male": {
+          "red": { "max": 30, "label": "Warnung" },
+          "yellow": { "min": 31, "max": 59, "label": "OK" },
+          "green": { "min": 60, "max": 89, "label": "Ziel" },
+          "gold": { "min": 90, "label": "Exzellent" }
+        },
+        "female": {
+          "red": { "max": 25, "label": "Warnung" },
+          "yellow": { "min": 26, "max": 49, "label": "OK" },
+          "green": { "min": 50, "max": 79, "label": "Ziel" },
+          "gold": { "min": 80, "label": "Exzellent" }
+        }
+      },
+      "rationale": "Wall Sit misst isometrische Beinkraft und Ausdauer. Entscheidend für Sarkopenie-Prävention und funktionelle Mobilität. Starke Beine = längeres Leben. 60+ Sekunden ist ein solides Ziel für diese Altersgruppe.",
+      "source": "AGEIST Fitness Benchmarks | Peter Attia",
+      "improvement": "2-3x pro Woche: Progressive Zeitsteigerung, Bulgarian Split Squats, Goblet Squats"
+    },
+    {
+      "id": "gripStrength",
+      "name": "Grip Strength",
+      "category": "Kraft & Langlebigkeit",
+      "unit": "kg",
+      "thresholds": {
+        "male": {
+          "red": { "max": 27, "label": "Warnung" },
+          "yellow": { "min": 28, "max": 35, "label": "OK" },
+          "green": { "min": 36, "max": 43, "label": "Ziel" },
+          "gold": { "min": 44, "label": "Exzellent" }
+        },
+        "female": {
+          "red": { "max": 16, "label": "Warnung" },
+          "yellow": { "min": 17, "max": 21, "label": "OK" },
+          "green": { "min": 22, "max": 27, "label": "Ziel" },
+          "gold": { "min": 28, "label": "Exzellent" }
+        }
+      },
+      "rationale": "Griffkraft ist DER beste Einzelprädiktor für Gesamtmortalität, funktionelle Unabhängigkeit und Gesundheitsspanne. Jede 5kg Reduktion erhöht das Sterberisiko um 16%. Für Männer 60+: >36kg, Frauen: >22kg ist das Ziel.",
+      "source": "Bohannon 2019, PMC6778477 | Wu et al. Meta-Analysis | Leong et al., Lancet 2015",
+      "improvement": "Farmer's Carries, Dead Hangs, Grip Trainer, Heavy Carries 2x pro Woche"
+    },
+    {
+      "id": "vo2max",
+      "name": "VO2 Max",
+      "category": "Kardiovaskuläre Fitness",
+      "unit": "ml/kg/min",
+      "thresholds": {
+        "male": {
+          "red": { "max": 24, "label": "Warnung - Hohes Risiko" },
+          "yellow": { "min": 25, "max": 32, "label": "Unterdurchschnitt" },
+          "green": { "min": 33, "max": 40, "label": "Gut" },
+          "gold": { "min": 41, "label": "Exzellent" }
+        },
+        "female": {
+          "red": { "max": 20, "label": "Warnung - Hohes Risiko" },
+          "yellow": { "min": 21, "max": 27, "label": "Unterdurchschnitt" },
+          "green": { "min": 28, "max": 35, "label": "Gut" },
+          "gold": { "min": 36, "label": "Exzellent" }
+        }
+      },
+      "rationale": "Peter Attia: VO2 Max ist der wichtigste Marker für Langlebigkeit. Menschen im untersten Quartil haben 5x höheres Sterberisiko als im obersten Quartil. Jede 1 ml/kg/min Verbesserung reduziert Mortalitätsrisiko um ~10%. Für 60+: >33 (M) / >28 (W) ist das Minimalziel.",
+      "source": "Peter Attia, Outlive | Cooper Institute Norms | AHA Scientific Statement",
+      "improvement": "4-5x pro Woche: Zone 2 Training (180-Alter), 1x pro Woche VO2 Max Intervalle (4x4min)"
+    },
+    {
+      "id": "restingHR",
+      "name": "Ruhepuls",
+      "category": "Kardiovaskuläre Gesundheit",
+      "unit": "bpm",
+      "thresholds": {
+        "male": {
+          "gold": { "max": 55, "label": "Exzellent" },
+          "green": { "min": 56, "max": 65, "label": "Sehr gut" },
+          "yellow": { "min": 66, "max": 75, "label": "Gut" },
+          "red": { "min": 76, "label": "Verbesserungsbedarf" }
+        },
+        "female": {
+          "gold": { "max": 60, "label": "Exzellent" },
+          "green": { "min": 61, "max": 70, "label": "Sehr gut" },
+          "yellow": { "min": 71, "max": 80, "label": "Gut" },
+          "red": { "min": 81, "label": "Verbesserungsbedarf" }
+        }
+      },
+      "rationale": "Niedriger Ruhepuls zeigt ein effizientes Herz-Kreislauf-System. Ruhepuls >70 ist mit erhöhtem kardiovaskulärem Risiko verbunden. Trainierte 60+ können 50-65 bpm erreichen.",
+      "source": "AGEIST Fitness Benchmarks | AHA Guidelines",
+      "improvement": "Zone 2 Cardio 3-4x pro Woche, Stressmanagement, ausreichend Schlaf"
+    },
+    {
+      "id": "boneDensity",
+      "name": "Knochendichte (T-Score)",
+      "category": "Skelettgesundheit",
+      "unit": "T-Score",
+      "thresholds": {
+        "both": {
+          "gold": { "min": 0, "label": "Optimal" },
+          "green": { "min": -0.9, "max": -0.1, "label": "Normal" },
+          "yellow": { "min": -2.4, "max": -1.0, "label": "Osteopenie" },
+          "red": { "max": -2.5, "label": "Osteoporose" }
+        }
+      },
+      "rationale": "Knochendichte (DEXA-Scan T-Score) ist entscheidend zur Frakturprävention. T-Score >-1.0 ist normal, -1.0 bis -2.5 = Osteopenie, <-2.5 = Osteoporose. Krafttraining kann Knochendichte um 1-3% pro Jahr steigern.",
+      "source": "WHO Kriterien | NIH Osteoporosis Guidelines",
+      "improvement": "3-4x Krafttraining (schwere Lasten), Jump Training, Vitamin D + K2, ausreichend Protein (1.6g/kg)"
+    },
+    {
+      "id": "balance",
+      "name": "Einbeinstand (Augen geschlossen)",
+      "category": "Gleichgewicht & Sturzprävention",
+      "unit": "Sekunden",
+      "thresholds": {
+        "both": {
+          "red": { "max": 5, "label": "Hohes Sturzrisiko" },
+          "yellow": { "min": 6, "max": 14, "label": "Verbesserungsbedarf" },
+          "green": { "min": 15, "max": 29, "label": "Gut" },
+          "gold": { "min": 30, "label": "Exzellent" }
+        }
+      },
+      "rationale": "Stürze sind die #1 Todesursache bei 65+. Einbeinstand mit geschlossenen Augen testet propriozeptive Balance. <10 Sekunden = erhöhtes Sturzrisiko. Training kann Balance dramatisch verbessern.",
+      "source": "AGEIST Balance Test | CDC Fall Prevention Guidelines",
+      "improvement": "Täglich: Einbeinstand-Übungen, Barfußgehen, Single-Leg Deadlifts, Balance Board"
+    },
+    {
+      "id": "flexibility",
+      "name": "Sit-and-Reach / Zehen berühren",
+      "category": "Flexibilität & Mobilität",
+      "unit": "Finger zu Boden (cm)",
+      "thresholds": {
+        "male": {
+          "gold": { "max": 0, "label": "Zehen berühren oder darüber" },
+          "green": { "min": 1, "max": 10, "label": "Fast da (bis zu 10cm Abstand)" },
+          "yellow": { "min": 11, "max": 20, "label": "Knöchel erreichen" },
+          "red": { "min": 21, "label": "Steif - nur Knie erreichen" }
+        },
+        "female": {
+          "gold": { "max": 0, "label": "Über die Zehen hinaus" },
+          "green": { "min": 1, "max": 8, "label": "Zehen berühren" },
+          "yellow": { "min": 9, "max": 18, "label": "Knöchel erreichen" },
+          "red": { "min": 19, "label": "Steif - nur Knie erreichen" }
+        }
+      },
+      "rationale": "Hüft- und Hamstring-Flexibilität ist entscheidend für Rückengesundheit, Sturzprävention und funktionelle Bewegung. Schlechte Flexibilität erhöht Verletzungsrisiko im Alltag.",
+      "source": "AGEIST Joint Health Benchmarks",
+      "improvement": "Täglich: Hamstring Stretches, Hip Flexor Stretches, Yoga, Deep Squat Holds"
+    }
+  ],
+
+  "weeklyPlan": {
+    "philosophy": "Basierend auf Andrew Huberman's Foundational Fitness Protocol und Peter Attia's Centenarian Decathlon Training. Ziel: Kraft, Ausdauer, Mobilität und Langlebigkeit für 60+.",
+    "minimumFrequency": "5-6 Tage pro Woche",
+    "rationale": "Huberman empfiehlt 3-4x Kraft + 3-4x Cardio (mit Überlappung = 5-6 Tage). Attia: 'Mehr ist besser' - 5+ Tage Training. Für 60+ ist Konsistenz wichtiger als Intensität. Regelmäßige Bewegung bekämpft Sarkopenie (3-5% Muskelverlust pro Dekade nach 30), erhält VO2 Max, Knochendichte und metabolische Gesundheit.",
+    "sources": [
+      "Andrew Huberman Podcast #193: Foundational Fitness Protocol",
+      "Peter Attia, Outlive (2023) - Centenarian Decathlon",
+      "ACSM Guidelines for 65+ Jahre"
+    ],
+    
+    "weekPlan": [
+      {
+        "day": "Montag",
+        "focus": "Kraft Unterkörper + Zone 2 Cardio",
+        "duration": "60-75 min",
+        "exercises": "Goblet Squats, Bulgarian Split Squats, Romanian Deadlifts, Wall Sit",
+        "cardio": "30 min Zone 2 (Rudern, Radfahren oder Walking)",
+        "notes": "Zone 2 = 180 minus Alter in bpm. Sollte sprechen können, aber leicht anstrengend."
+      },
+      {
+        "day": "Dienstag",
+        "focus": "Kraft Oberkörper (Push) + Mobilität",
+        "duration": "50-60 min",
+        "exercises": "Push-ups (Variationen), Overhead Press, Chest Press, Tricep Dips",
+        "mobility": "15 min Shoulder/Thoracic Mobility, Hip Flexor Stretches",
+        "notes": "Push-Tag: Alle drückenden Bewegungen. Mobilität am Ende."
+      },
+      {
+        "day": "Mittwoch",
+        "focus": "Zone 2 Cardio + Core",
+        "duration": "45-60 min",
+        "cardio": "40 min Zone 2 (Variation: Schwimmen, Radfahren, Power Walking)",
+        "core": "Plank Variations, Dead Bugs, Bird Dogs, Pallof Press",
+        "notes": "Aktive Erholung. Core-Arbeit ist Rumpf-Stabilität, nicht nur Sit-ups."
+      },
+      {
+        "day": "Donnerstag",
+        "focus": "Kraft Ganzkörper (Pull) + Griffkraft",
+        "duration": "50-60 min",
+        "exercises": "Rows (alle Variationen), Pull-downs, Dead Hangs, Farmer's Carries",
+        "grip": "Dead Hang 3x Max Zeit, Farmer's Carry 3x 30-60s",
+        "notes": "Pull-Tag: Alle ziehenden Bewegungen. Griffkraft extra betonen."
+      },
+      {
+        "day": "Freitag",
+        "focus": "VO2 Max Intervalle + Balance",
+        "duration": "40-50 min",
+        "intervals": "4-6x 4 min @ VO2 Max Intensität (85-95% Max HR), 4 min Erholung",
+        "balance": "10 min: Einbeinstand, Single-Leg Deadlifts, Balance Board",
+        "notes": "HART aber kurz. 1x pro Woche reicht. Peter Attia's #1 Longevity-Training."
+      },
+      {
+        "day": "Samstag",
+        "focus": "Kraft Unterkörper + Zone 2",
+        "duration": "60-75 min",
+        "exercises": "Deadlifts (leicht), Step-ups, Lunges, Calf Raises",
+        "cardio": "30 min Zone 2 (Natur-Walk oder Wanderung ideal)",
+        "notes": "Leichterer Kraft-Tag. Fokus auf funktionelle Bewegungen."
+      },
+      {
+        "day": "Sonntag",
+        "focus": "Aktive Erholung + Dehnung",
+        "duration": "30-45 min",
+        "activity": "Leichter Spaziergang, Schwimmen, Yoga oder Tai Chi",
+        "stretch": "30 min Full-Body Stretching, Foam Rolling",
+        "notes": "Erholung ist Training. Keine Intensität, nur Bewegung + Flexibilität."
+      }
+    ],
+
+    "keyPrinciples": [
+      "**Frequenz schlägt Intensität**: Lieber 5x moderat als 2x brutal.",
+      "**Zone 2 ist König**: 150-180 min pro Woche (Huberman: 'nicht verhandelbar').",
+      "**Kraft = Anti-Aging**: 3-4x Krafttraining stoppt Sarkopenie und erhält Knochendichte.",
+      "**VO2 Max 1x pro Woche**: Hart aber entscheidend für kardiovaskuläre Langlebigkeit.",
+      "**Progression ist Pflicht**: Jede Woche etwas mehr - Gewicht, Wiederholungen oder Zeit.",
+      "**Erholung = Wachstum**: Schlaf 7-9h, Protein 1.6g/kg, aktive Erholung einplanen."
+    ]
+  },
+
+  "biomarkerCards": [
+    {
+      "id": "osteoporosis",
+      "title": "Osteoporose & Knochendichte",
+      "subtitle": "Warum Knochen im Alter entscheidend sind",
+      "whatIsIt": "Osteoporose ist eine Erkrankung, bei der Knochen an Dichte und Festigkeit verlieren. Sie werden porös und brüchig. Das Risiko steigt ab 50 dramatisch, besonders bei Frauen nach der Menopause (Östrogenmangel). Männer sind ab 70 ebenfalls stark betroffen.",
+      "dexa": {
+        "what": "DEXA-Scan (Dual-Energy X-ray Absorptiometry) ist der Goldstandard zur Messung der Knochendichte. Misst die Mineraldichte in g/cm² an Hüfte und Wirbelsäule.",
+        "tscoreScale": [
+          "**T-Score +1.0 bis -1.0**: Normal - Knochen sind stark",
+          "**T-Score -1.0 bis -2.5**: Osteopenie - Verminderte Knochendichte, Vorstufe",
+          "**T-Score < -2.5**: Osteoporose - Hohes Frakturrisiko"
+        ],
+        "whenToTest": "Frauen: Ab 65 Jahre (früher bei Risikofaktoren). Männer: Ab 70 Jahre. Bei Osteopenie: Alle 2 Jahre wiederholen."
+      },
+      "howStrengthHelps": [
+        "**Krafttraining = Knochenwachstum**: Mechanischer Stress auf Knochen stimuliert Osteoblasten (knochenbildende Zellen). Schwere Lasten (70-85% 1RM) sind am effektivsten.",
+        "**1-3% Zunahme pro Jahr**: Regelmäßiges Krafttraining kann Knochendichte signifikant erhöhen.",
+        "**Impact-Training**: Springen, Laufen, Step-ups erzeugen zusätzlichen Stimulus.",
+        "**Nie zu spät**: Auch 80-Jährige können Knochendichte aufbauen."
+      ],
+      "prevention": [
+        "3-4x pro Woche Krafttraining (schwer!)",
+        "Vitamin D3 (2000-4000 IU) + K2 (100-200 mcg)",
+        "Kalzium (1000-1200mg täglich, aus Nahrung bevorzugt)",
+        "Protein: 1.6g/kg Körpergewicht",
+        "Nicht rauchen, Alkohol limitieren"
+      ],
+      "sources": "NIH Osteoporosis Guidelines | Peter Attia, Outlive | Bone Journal Meta-Analysis 2019"
+    },
+    {
+      "id": "gripStrength",
+      "title": "Grip Strength - Der Langlebigkeits-Indikator",
+      "subtitle": "Warum Händedruck über Leben und Tod entscheidet",
+      "whyItMatters": "Griffkraft ist der beste EINZEL-Prädiktor für Gesamtmortalität, Krankenhausaufenthalte, funktionelle Unabhängigkeit und Lebensqualität. Stärker als Blutdruck, Cholesterin oder BMI.",
+      "studies": [
+        "**Leong et al., Lancet 2015**: 140.000 Menschen, 17 Länder. Jede 5kg Reduktion = 16% höheres Sterberisiko.",
+        "**Bohannon 2019 Review**: Grip Strength korreliert mit kardiovaskulärer Mortalität, Krebs, Demenz, Depression, Hospitalisierung.",
+        "**Harvard Firefighters Study**: Niedrige Griffkraft = 2-3x höheres Risiko für metabolisches Syndrom."
+      ],
+      "howToMeasure": {
+        "equipment": "Hand-Dynamometer (z.B. Jamar, Camry Digital). Kosten: 20-100 Euro.",
+        "protocol": "Sitzend, Ellbogen 90°, Unterarm auf Armstütze. 3 Versuche pro Hand, beste zählt. Standardisiert nach American Society of Hand Therapists.",
+        "targets": {
+          "menOver60": ">36kg = gut, >43kg = exzellent, <27kg = Warnung",
+          "womenOver60": ">22kg = gut, >27kg = exzellent, <16kg = Warnung"
+        }
+      },
+      "howToImprove": [
+        "**Dead Hangs**: 3x pro Woche, 3 Sets à Max-Zeit (Ziel: 30-60s)",
+        "**Farmer's Carries**: 2x pro Woche, 3x 30-60s mit schweren Kettlebells/Hanteln",
+        "**Grip Trainer**: Täglich 5-10 min (Captains of Crush, Varigrip)",
+        "**Pull-ups/Rows**: Alle Zugübungen trainieren Griffkraft mit",
+        "**Thick Bar Training**: Fat Gripz auf Hanteln = 2x Griffstimulus"
+      ],
+      "mechanismWhyItPredicts": "Griffkraft reflektiert gesamte Muskel-Masse, neuromuskuläre Effizienz, Entzündungsstatus und biologisches Alter. Es ist ein 'Vital Sign' - so wichtig wie Blutdruck oder Puls.",
+      "sources": "Bohannon, PMC6778477 | Leong et al., Lancet 2015 | Wu et al. Meta-Analysis"
+    },
+    {
+      "id": "vo2max",
+      "title": "VO2 Max - Peter Attia's #1 Langlebigkeits-Marker",
+      "subtitle": "Die wichtigste Zahl für ein langes Leben",
+      "whatIsIt": "VO2 Max ist die maximale Menge an Sauerstoff, die dein Körper während intensiver Belastung aufnehmen und verwerten kann. Gemessen in ml/kg/min (Milliliter Sauerstoff pro Kilogramm Körpergewicht pro Minute). Es ist der Goldstandard für kardiovaskuläre Fitness.",
+      "whyAttiaLovesIt": [
+        "**#1 Prädiktor für Langlebigkeit**: Stärker als jeder andere Marker (Blutdruck, Cholesterin, Blutzucker).",
+        "**5x Mortalitätsunterschied**: Menschen im untersten Quartil (niedrigste 25%) sterben 5x häufiger als im obersten Quartil.",
+        "**10% pro ml/kg/min**: Jede Erhöhung um 1 ml/kg/min = ~10% Reduktion des Sterberisikos.",
+        "**Trainierbar**: Im Gegensatz zu Genetik kann man VO2 Max durch Training um 15-30% steigern."
+      ],
+      "howToTest": [
+        {
+          "method": "VO2 Max Lab Test",
+          "description": "Goldstandard. Auf Laufband/Ergometer mit Atemmaske. Misst direkt O2-Aufnahme. Kosten: 100-200 Euro. Sportmedizinische Zentren.",
+          "accuracy": "100%"
+        },
+        {
+          "method": "Cooper 12-Minuten-Test",
+          "description": "Laufe 12 Minuten so weit wie möglich. VO2 Max = (Distanz in Metern - 504.9) / 44.73. Einfach, kostenlos, ~90% genau.",
+          "accuracy": "~90%"
+        },
+        {
+          "method": "2000m Rudergerät-Test",
+          "description": "Concept2 Rower hat eingebauten VO2-Max-Rechner. Rudere 2000m so schnell wie möglich. Low-impact, sehr gut für 60+.",
+          "accuracy": "~85%"
+        },
+        {
+          "method": "Smartwatch-Schätzung",
+          "description": "Apple Watch, Garmin, Polar schätzen VO2 Max. Basiert auf Herzfrequenz-Daten während Training. Ungenau aber praktisch für Trends.",
+          "accuracy": "~70-80%"
+        }
+      ],
+      "targets": {
+        "menOver60": [
+          "< 24 ml/kg/min: Hohes Risiko (untere 25%)",
+          "25-32: Unterdurchschnittlich",
+          "33-40: Gut (Ziel!)",
+          "> 41: Elite (obere 10%)"
+        ],
+        "womenOver60": [
+          "< 20 ml/kg/min: Hohes Risiko",
+          "21-27: Unterdurchschnittlich",
+          "28-35: Gut (Ziel!)",
+          "> 36: Elite"
+        ]
+      },
+      "howToImprove": [
+        "**Zone 2 Training (Basis)**: 3-4x pro Woche, 45-60 min. Intensität: 180 minus Alter in bpm. Du solltest sprechen können, aber es ist anstrengend. Baut aerobe Basis = Mitochondrien.",
+        "**VO2 Max Intervalle (Peak)**: 1x pro Woche. 4-6x 4 Minuten @ 85-95% Max HR, 3-4 min Erholung. HART. Aber DAS ist was VO2 Max steigert.",
+        "**Variiere Modalitäten**: Laufen, Rudern, Radfahren, Schwimmen. Crosstraining verhindert Überlastung.",
+        "**Konsistenz**: 6-12 Monate konsequentes Training = 15-30% Steigerung möglich, auch bei 60+.",
+        "**HIT (Hochintensives Intervalltraining)**: Tabata, 30/30 Sprints. Ergänzend zu 4x4min."
+      ],
+      "sources": "Peter Attia, Outlive | Cooper Institute | AHA Scientific Statement | Kodama et al., JAMA 2009"
+    },
+    {
+      "id": "sarcopenia",
+      "title": "Sarkopenie - Der stille Muskelverlust",
+      "subtitle": "Warum du ab 30 Muskeln verlierst und wie du es stoppst",
+      "whatIsIt": "Sarkopenie ist der altersbedingte Verlust von Muskelmasse, -kraft und -funktion. Ab 30 verliert man durchschnittlich 3-5% Muskelmasse pro Dekade. Ab 60 beschleunigt sich der Verlust auf bis zu 1% pro Jahr. Das Resultat: Schwäche, Sturzgefahr, Stoffwechselprobleme, Verlust der Unabhängigkeit.",
+      "timeline": [
+        "**30-40 Jahre**: Verlust beginnt schleichend (-3% pro Dekade). Kaum merkbar.",
+        "**40-50 Jahre**: Beschleunigung (-3-5%). Erste Schwächesymptome.",
+        "**50-60 Jahre**: Deutlicher Verlust (-5-8%). Alltagsaktivitäten werden schwerer.",
+        "**60+ Jahre**: Dramatisch (-1% pro JAHR = 10% pro Dekade). Ohne Training: Rollstuhl-Risiko."
+      ],
+      "consequences": [
+        "Verlust von Kraft und Mobilität",
+        "Erhöhtes Sturzrisiko und Frakturen",
+        "Metabolisches Syndrom (Muskel = Glukose-Speicher)",
+        "Reduzierte Knochendichte (Muskel schützt Knochen)",
+        "Verlust der Unabhängigkeit (Treppen, Einkaufen, etc.)"
+      ],
+      "howToFight": [
+        "**Krafttraining ist NICHT optional**: 3-4x pro Woche. Schwere Lasten (70-85% 1RM). Das ist der EINZIGE Weg Sarkopenie zu stoppen.",
+        "**Protein, Protein, Protein**: 1.6-2.0g/kg Körpergewicht täglich. Ältere brauchen MEHR Protein (anabolic resistance).",
+        "**Leucin-reiche Mahlzeiten**: 2.5-3g Leucin pro Mahlzeit. Whey Protein, Fleisch, Eier.",
+        "**Ganzkörper-Übungen**: Squats, Deadlifts, Press, Rows. Compound > Isolation.",
+        "**Progressive Überlastung**: Jede Woche etwas mehr. Der Muskel braucht einen Grund zu wachsen.",
+        "**Nicht hungern**: Kaloriendefizit = Muskelverlust im Alter. Erhaltungskalorien oder leichter Überschuss."
+      ],
+      "keyMessage": "Sarkopenie ist NICHT unvermeidlich. Du kannst mit 70 stärker sein als mit 50 - wenn du richtig trainierst. Krafttraining ist das beste Anti-Aging-Medikament das existiert.",
+      "sources": "Cruz-Jentoft et al., Age Ageing 2019 | Burd et al., J Appl Physiol | Peter Attia, Outlive"
+    },
+    {
+      "id": "balance",
+      "title": "Balance & Stürze - Die unterschätzte Todesursache",
+      "subtitle": "Warum Gleichgewicht im Alter Leben rettet",
+      "whyItMatters": [
+        "**Stürze = #1 Todesursache bei 65+**: Jährlich sterben mehr Menschen an Sturzfolgen als an Verkehrsunfällen.",
+        "**1 von 3 über 65 stürzt pro Jahr**: Von diesen erleiden 50% Frakturen (Hüfte, Handgelenk, Wirbel).",
+        "**Hüftfraktur = 50% sterben innerhalb 1 Jahr**: Durch Komplikationen, Immobilität, Lungenentzündung.",
+        "**Angst vor Stürzen = Inaktivität = Teufelskreis**: Wer Angst hat, bewegt sich weniger → wird schwächer → stürzt eher."
+      ],
+      "whatCausesIt": [
+        "**Schwache Füße**: 33 Gelenke, 20 Muskeln im Fuß. Moderne Schuhe machen Füße schwach.",
+        "**Schwache Hüften**: Gluteus Medius (seitlicher Po) stabilisiert. Sitzen = schwach.",
+        "**Schlechte Propriozeption**: Körper weiß nicht mehr wo er im Raum ist.",
+        "**Vestibuläre Probleme**: Innenohr-Balance lässt nach.",
+        "**Sarkopenie**: Schwache Muskeln = langsame Reflexe."
+      ],
+      "howToTest": [
+        {
+          "test": "Einbeinstand (Augen geschlossen)",
+          "protocol": "Barfuß, ein Bein heben, Augen schließen. Zeit stoppen bis du Balance verlierst.",
+          "targets": "> 30s = exzellent | 15-29s = gut | 6-14s = OK | < 5s = hohes Risiko"
+        },
+        {
+          "test": "Tandem Stand",
+          "protocol": "Ein Fuß direkt vor den anderen (Ferse zu Zehenspitzen). 30 Sekunden halten.",
+          "targets": "> 25s = gut | < 10s = Warnung"
+        },
+        {
+          "test": "Sit-to-Stand (5x)",
+          "protocol": "Von Stuhl aufstehen ohne Hände, 5x so schnell wie möglich.",
+          "targets": "< 12s = gut | > 15s = Sturzrisiko"
+        }
+      ],
+      "howToImprove": [
+        "**Täglich Einbeinstand**: Beim Zähneputzen, in der Küche. 2x 30-60s pro Bein.",
+        "**Barfuß gehen**: Zu Hause, im Garten. Stärkt Fußmuskulatur.",
+        "**Single-Leg Exercises**: Bulgarian Split Squats, Single-Leg Deadlifts, Step-ups.",
+        "**Balance Board/BOSU**: 2-3x pro Woche, 10 min.",
+        "**Tai Chi/Yoga**: Beides erwiesenermaßen sturzpräventiv.",
+        "**Hip Strengthening**: Clamshells, Side Planks, Hip Abduction."
+      ],
+      "sources": "CDC Fall Prevention | The Foot Collective | AGEIST Balance Research"
+    }
+  ],
+
+  "keyTakeaways": [
+    "Grip Strength ist der beste Einzelprädiktor für Langlebigkeit - jede 5kg Reduktion = 16% höheres Sterberisiko.",
+    "Nach 30 verliert man 3-5% Muskelmasse pro Dekade - ohne Krafttraining. Ab 60: bis zu 1% pro Jahr.",
+    "VO2 Max im untersten Viertel = 5x höheres Sterberisiko vs. oberstes Viertel (Peter Attia).",
+    "Harvard-Studie: 40+ Push-ups = 96% geringeres kardiovaskuläres Risiko. Für 60+: 20-30 ist ein exzellentes Ziel.",
+    "Stürze sind die #1 Todesursache bei 65+ - Balance-Training ist lebensrettend.",
+    "Krafttraining ist das wirksamste Anti-Aging-Medikament. Punkt.",
+    "Frequenz schlägt Intensität: 5x moderat > 2x brutal. Konsistenz ist König.",
+    "Zone 2 Training (180-Alter) 3-4x pro Woche = Basis für alle Langlebigkeit.",
+    "Protein: 1.6-2.0g/kg täglich. Ältere haben 'anabolic resistance' - mehr Protein nötig.",
+    "Hüftfraktur = 50% Sterberisiko innerhalb 1 Jahr. Krafttraining + Vitamin D + Balance-Training verhindert das.",
+    "Knochen sind Gewebe - sie wachsen unter Last. Schweres Krafttraining kann Knochendichte um 1-3% pro Jahr erhöhen.",
+    "Dead Hang 30-60 Sekunden sollte jeder 60+ schaffen können. Es rettet Schultern und testet Griffkraft.",
+    "VO2 Max ist trainierbar - auch bei 70+. 15-30% Steigerung möglich mit richtigem Training.",
+    "4x4min VO2 Max Intervalle 1x pro Woche = maximaler Langlebigkeits-Benefit (Attia/Huberman).",
+    "Sarkopenie ist NICHT unvermeidlich. Du kannst mit 70 stärker sein als mit 50 - wenn du trainierst.",
+    "Einbeinstand < 10 Sekunden = hohes Sturzrisiko. Tägliches Training kann das in Wochen beheben."
+  ],
+
+  "exercises": [
+    {
+      "id": "ex_pushup_001",
+      "name": "Push-up (Standard)",
+      "category": "Kraft Oberkörper",
+      "targetMuscles": ["Brust", "Trizeps", "Schultern", "Core"],
+      "difficulty": "Mittel",
+      "whyImportant": "Der ultimative Oberkörper-Test. Harvard-Studie zeigt: 40+ Push-ups = 96% geringeres Herz-Risiko. Für 60+: 20-30 ist das Ziel.",
+      "modifications": "Wall Push-ups → Knie Push-ups → Standard → Decline Push-ups",
+      "gifUrl": "https://static.exercisedb.dev/media/pushup.gif",
+      "reps": "3 Sets à 8-15 Wiederholungen"
+    },
+    {
+      "id": "ex_deadhang_001",
+      "name": "Dead Hang",
+      "category": "Kraft Oberkörper",
+      "targetMuscles": ["Griffkraft", "Lat", "Core", "Schulterstabilität"],
+      "difficulty": "Mittel-Schwer",
+      "whyImportant": "Testet und baut Griffkraft (Langlebigkeits-Marker #1) und Schulterstabilität. Ziel: 30-60 Sekunden.",
+      "modifications": "Füße am Boden → Teilhang → Voller Dead Hang",
+      "gifUrl": "https://static.exercisedb.dev/media/deadhang.gif",
+      "reps": "3 Sets à Max-Zeit"
+    },
+    {
+      "id": "ex_goblet_squat_001",
+      "name": "Goblet Squat",
+      "category": "Kraft Unterkörper",
+      "targetMuscles": ["Quadrizeps", "Gluteus", "Core"],
+      "difficulty": "Leicht-Mittel",
+      "whyImportant": "Perfekte Squat-Form, stoppt Sarkopenie in Beinen. Funktionell für Aufstehen, Treppen, Alltagsbewegungen.",
+      "modifications": "Bodyweight Squat → Light Kettlebell → Heavy Goblet Squat",
+      "gifUrl": "https://static.exercisedb.dev/media/goblet-squat.gif",
+      "reps": "3 Sets à 10-15 Wiederholungen"
+    },
+    {
+      "id": "ex_bulgarian_split_001",
+      "name": "Bulgarian Split Squat",
+      "category": "Kraft Unterkörper",
+      "targetMuscles": ["Quadrizeps", "Gluteus", "Hamstrings", "Balance"],
+      "difficulty": "Mittel-Schwer",
+      "whyImportant": "Unilaterale Kraft (eine Seite arbeitet). Behebt Asymmetrien, verbessert Balance. Peter Attia's Favorit.",
+      "modifications": "Bodyweight → Leichte Hanteln → Schwere Hanteln",
+      "gifUrl": "https://static.exercisedb.dev/media/bulgarian-split-squat.gif",
+      "reps": "3 Sets à 8-12 pro Bein"
+    },
+    {
+      "id": "ex_wall_sit_001",
+      "name": "Wall Sit",
+      "category": "Kraft Unterkörper",
+      "targetMuscles": ["Quadrizeps", "Gluteus"],
+      "difficulty": "Mittel",
+      "whyImportant": "Isometrische Beinkraft-Ausdauer. Benchmark: 60+ Sekunden. Direkt messbar, motivierend.",
+      "modifications": "Höherer Winkel (leichter) → 90° (Standard) → Single-Leg Wall Sit",
+      "gifUrl": "https://static.exercisedb.dev/media/wall-sit.gif",
+      "reps": "3 Sets à Max-Zeit (Ziel: 60-90s)"
+    },
+    {
+      "id": "ex_romanian_deadlift_001",
+      "name": "Romanian Deadlift (RDL)",
+      "category": "Kraft Unterkörper",
+      "targetMuscles": ["Hamstrings", "Gluteus", "Unterer Rücken"],
+      "difficulty": "Mittel",
+      "whyImportant": "Stärkt posteriore Kette (Rückseite Körper). Entscheidend für Rückengesundheit und Sturzprävention.",
+      "modifications": "Bodyweight RDL → Kettlebell → Barbell RDL",
+      "gifUrl": "https://static.exercisedb.dev/media/romanian-deadlift.gif",
+      "reps": "3 Sets à 8-12 Wiederholungen"
+    },
+    {
+      "id": "ex_farmers_carry_001",
+      "name": "Farmer's Carry",
+      "category": "Kraft Oberkörper",
+      "targetMuscles": ["Griffkraft", "Core", "Traps", "Ganzer Körper"],
+      "difficulty": "Leicht-Mittel",
+      "whyImportant": "Der beste Griffkraft-Builder. Funktionell (Einkaufstaschen tragen). Core-Stabilität unter Last.",
+      "modifications": "Leichte Kettlebells → Schwere Hanteln → Uneven Load (eine Seite schwerer)",
+      "gifUrl": "https://static.exercisedb.dev/media/farmers-carry.gif",
+      "reps": "3 Sets à 30-60 Sekunden"
+    },
+    {
+      "id": "ex_overhead_press_001",
+      "name": "Overhead Press (Stehend)",
+      "category": "Kraft Oberkörper",
+      "targetMuscles": ["Schultern", "Trizeps", "Core"],
+      "difficulty": "Mittel",
+      "whyImportant": "Schulterkraft und Stabilität. Wichtig um Dinge über Kopf zu heben (Koffer, Regal). Verhindert Schulter-Impingement.",
+      "modifications": "Seated Press → Standing Press (mit leichtem Gewicht) → Heavy Overhead Press",
+      "gifUrl": "https://static.exercisedb.dev/media/overhead-press.gif",
+      "reps": "3 Sets à 8-12 Wiederholungen"
+    },
+    {
+      "id": "ex_bent_over_row_001",
+      "name": "Bent-Over Row (Kurzhantel)",
+      "category": "Kraft Oberkörper",
+      "targetMuscles": ["Lat", "Rhomboids", "Bizeps", "Core"],
+      "difficulty": "Mittel",
+      "whyImportant": "Stärkt Rückenmuskulatur (gegen Rundrücken). Verbessert Haltung. Ziehmuster = Griffkraft.",
+      "modifications": "Supported Row (Brust auf Bank) → Bent-Over Row → Heavy Barbell Row",
+      "gifUrl": "https://static.exercisedb.dev/media/bent-over-row.gif",
+      "reps": "3 Sets à 10-15 Wiederholungen"
+    },
+    {
+      "id": "ex_plank_001",
+      "name": "Plank (Unterarmstütz)",
+      "category": "Core/Rumpf",
+      "targetMuscles": ["Core", "Schultern", "Gluteus"],
+      "difficulty": "Leicht-Mittel",
+      "whyImportant": "Core-Stabilität ist Basis für ALLES. Verhindert Rückenschmerzen. Benchmark: 60+ Sekunden.",
+      "modifications": "Knie Plank → Standard Plank → RKC Plank (maximale Spannung)",
+      "gifUrl": "https://static.exercisedb.dev/media/plank.gif",
+      "reps": "3 Sets à 30-60+ Sekunden"
+    },
+    {
+      "id": "ex_dead_bug_001",
+      "name": "Dead Bug",
+      "category": "Core/Rumpf",
+      "targetMuscles": ["Core", "Hüftbeuger"],
+      "difficulty": "Leicht",
+      "whyImportant": "Anti-Extension Core-Übung. Lehrt lumbal stabilization. Perfekt für Rückengesundheit.",
+      "modifications": "Single Arm/Leg → Full Dead Bug → Weighted Dead Bug",
+      "gifUrl": "https://static.exercisedb.dev/media/dead-bug.gif",
+      "reps": "3 Sets à 10-15 pro Seite"
+    },
+    {
+      "id": "ex_bird_dog_001",
+      "name": "Bird Dog",
+      "category": "Core/Rumpf",
+      "targetMuscles": ["Core", "Unterer Rücken", "Gluteus", "Balance"],
+      "difficulty": "Leicht",
+      "whyImportant": "Koordination, Core-Stabilität, Rückengesundheit. Einfach aber effektiv.",
+      "modifications": "Single Arm → Single Leg → Full Bird Dog → Hold 5-10s",
+      "gifUrl": "https://static.exercisedb.dev/media/bird-dog.gif",
+      "reps": "3 Sets à 10-12 pro Seite"
+    },
+    {
+      "id": "ex_pallof_press_001",
+      "name": "Pallof Press",
+      "category": "Core/Rumpf",
+      "targetMuscles": ["Core (Anti-Rotation)", "Obliques"],
+      "difficulty": "Mittel",
+      "whyImportant": "Anti-Rotations-Core-Training. Verhindert Drehbewegungen unter Last. Funktionell für Alltag.",
+      "modifications": "Kniend → Stehend → Single-Leg Pallof Press",
+      "gifUrl": "https://static.exercisedb.dev/media/pallof-press.gif",
+      "reps": "3 Sets à 10-12 pro Seite"
+    },
+    {
+      "id": "ex_single_leg_deadlift_001",
+      "name": "Single-Leg Deadlift",
+      "category": "Gleichgewicht",
+      "targetMuscles": ["Hamstrings", "Gluteus", "Balance", "Core"],
+      "difficulty": "Mittel",
+      "whyImportant": "Unilaterales Training + Balance. Behebt Asymmetrien. Sturzprävention.",
+      "modifications": "Hand an Wand → Bodyweight → Light Kettlebell → Heavy Single-Leg RDL",
+      "gifUrl": "https://static.exercisedb.dev/media/single-leg-deadlift.gif",
+      "reps": "3 Sets à 8-10 pro Bein"
+    },
+    {
+      "id": "ex_single_leg_stand_001",
+      "name": "Einbeinstand (Augen geschlossen)",
+      "category": "Gleichgewicht",
+      "targetMuscles": ["Balance", "Fußmuskulatur", "Propriozeption"],
+      "difficulty": "Leicht-Mittel",
+      "whyImportant": "DER Balance-Test. < 10s = Sturzrisiko. Täglich üben = dramatische Verbesserung in Wochen.",
+      "modifications": "Augen offen → Augen geschlossen → Auf weichem Untergrund",
+      "gifUrl": "https://static.exercisedb.dev/media/single-leg-stand.gif",
+      "reps": "Täglich: 3 Sets à 30-60s pro Bein"
+    },
+    {
+      "id": "ex_step_ups_001",
+      "name": "Step-ups (Box/Stufe)",
+      "category": "Kraft Unterkörper",
+      "targetMuscles": ["Quadrizeps", "Gluteus", "Balance"],
+      "difficulty": "Leicht-Mittel",
+      "whyImportant": "Funktionelle Bewegung (Treppen steigen). Unilaterales Training. Alltagsrelevant.",
+      "modifications": "Niedrige Stufe → Höhere Box → Weighted Step-ups",
+      "gifUrl": "https://static.exercisedb.dev/media/step-ups.gif",
+      "reps": "3 Sets à 10-12 pro Bein"
+    },
+    {
+      "id": "ex_clamshells_001",
+      "name": "Clamshells",
+      "category": "Gleichgewicht",
+      "targetMuscles": ["Gluteus Medius (seitlicher Po)", "Hüftstabilität"],
+      "difficulty": "Leicht",
+      "whyImportant": "Gluteus Medius = DER Balance-Muskel. Schwach = Stürze. Stärkt Hüfte seitlich.",
+      "modifications": "Bodyweight → Resistance Band → Heavy Band",
+      "gifUrl": "https://static.exercisedb.dev/media/clamshells.gif",
+      "reps": "3 Sets à 15-20 pro Seite"
+    },
+    {
+      "id": "ex_hip_flexor_stretch_001",
+      "name": "Hip Flexor Stretch (Knieender Ausfallschritt)",
+      "category": "Mobilität/Dehnung",
+      "targetMuscles": ["Hip Flexors", "Psoas"],
+      "difficulty": "Leicht",
+      "whyImportant": "Sitzen = verkürzte Hüftbeuger. Führt zu Rückenschmerzen und schlechter Haltung. Täglich dehnen.",
+      "modifications": "Leichte Dehnung → Tiefere Position → Arm overhead für mehr Stretch",
+      "gifUrl": "https://static.exercisedb.dev/media/hip-flexor-stretch.gif",
+      "reps": "Täglich: 2-3x 30-60s pro Seite"
+    },
+    {
+      "id": "ex_hamstring_stretch_001",
+      "name": "Hamstring Stretch (Stehend)",
+      "category": "Mobilität/Dehnung",
+      "targetMuscles": ["Hamstrings", "Wade"],
+      "difficulty": "Leicht",
+      "whyImportant": "Hamstring-Flexibilität = Rückengesundheit. Steife Hamstrings = Rückenschmerzen.",
+      "modifications": "Leichte Dehnung → Tiefere Forward Bend → Single-Leg Hamstring Stretch",
+      "gifUrl": "https://static.exercisedb.dev/media/hamstring-stretch.gif",
+      "reps": "Täglich: 2-3x 30-60s"
+    },
+    {
+      "id": "ex_deep_squat_hold_001",
+      "name": "Deep Squat Hold (Tiefe Hocke)",
+      "category": "Mobilität/Dehnung",
+      "targetMuscles": ["Hüfte", "Knöchel", "Knie (volle ROM)", "Rücken"],
+      "difficulty": "Mittel",
+      "whyImportant": "Der ultimative Mobilitäts-Test. Ferse am Boden, Butt to Ground. 60s halten = exzellente Mobilität.",
+      "modifications": "Erhöhte Fersen → Flache Füße → Hands-free Deep Squat",
+      "gifUrl": "https://static.exercisedb.dev/media/deep-squat-hold.gif",
+      "reps": "Täglich: 2-3x 30-60s"
+    },
+    {
+      "id": "ex_thoracic_rotation_001",
+      "name": "Thoracic Spine Rotation (Open Book)",
+      "category": "Mobilität/Dehnung",
+      "targetMuscles": ["Brustwirbelsäule (Rotation)", "Schultern"],
+      "difficulty": "Leicht",
+      "whyImportant": "Moderne Haltung = steife Brustwirbelsäule. Führt zu Schulterschmerzen. Tägliche Mobilisierung hilft.",
+      "modifications": "Seitenlage, oberes Knie angewinkelt, Arm rotiert → Hold 5s pro Seite",
+      "gifUrl": "https://static.exercisedb.dev/media/thoracic-rotation.gif",
+      "reps": "Täglich: 10-15 pro Seite"
+    },
+    {
+      "id": "ex_shoulder_circles_001",
+      "name": "Shoulder Circles (Armkreisen)",
+      "category": "Mobilität/Dehnung",
+      "targetMuscles": ["Schultern", "Rotatorenmanschette"],
+      "difficulty": "Leicht",
+      "whyImportant": "Schultermobilität = gesunde Schultern. Wichtig für Overhead-Bewegungen.",
+      "modifications": "Kleine Kreise → Große Kreise → Mit leichten Gewichten",
+      "gifUrl": "https://static.exercisedb.dev/media/shoulder-circles.gif",
+      "reps": "Täglich vor Training: 10-15 pro Richtung"
+    },
+    {
+      "id": "ex_cat_cow_001",
+      "name": "Cat-Cow (Katzenbuckel)",
+      "category": "Mobilität/Dehnung",
+      "targetMuscles": ["Wirbelsäule (gesamte)", "Core"],
+      "difficulty": "Leicht",
+      "whyImportant": "Wirbelsäulen-Mobilität in Flexion/Extension. Perfekt zum Aufwärmen oder als Daily Mobility.",
+      "modifications": "Langsame Bewegung → Fließende Bewegung → Hold in Endpositionen",
+      "gifUrl": "https://static.exercisedb.dev/media/cat-cow.gif",
+      "reps": "Täglich: 10-15 Wiederholungen"
+    },
+    {
+      "id": "ex_rowing_intervals_001",
+      "name": "Rudergerät (Intervalle)",
+      "category": "Cardio",
+      "targetMuscles": ["Ganzer Körper", "Kardiovaskulär", "VO2 Max"],
+      "difficulty": "Mittel-Schwer",
+      "whyImportant": "Low-Impact Cardio. Perfekt für 60+. Baut VO2 Max (Langlebigkeits-Marker #1). Ganzkörper-Training.",
+      "modifications": "Zone 2: 30-45min ruhig → VO2 Max Intervalle: 4x4min hart, 3min Pause",
+      "gifUrl": "https://static.exercisedb.dev/media/rowing.gif",
+      "reps": "Zone 2: 3-4x pro Woche | Intervalle: 1x pro Woche"
+    },
+    {
+      "id": "ex_cycling_zone2_001",
+      "name": "Radfahren (Zone 2)",
+      "category": "Cardio",
+      "targetMuscles": ["Beine", "Kardiovaskulär", "Aerobe Basis"],
+      "difficulty": "Leicht-Mittel",
+      "whyImportant": "Zone 2 = Basis für alles. Baut Mitochondrien, verbessert Fettstoffwechsel. Huberman: 'Nicht verhandelbar'.",
+      "modifications": "Flach → Leichte Hügel → Zone 2 Intervalle (180-Alter in bpm)",
+      "gifUrl": "https://static.exercisedb.dev/media/cycling.gif",
+      "reps": "3-4x pro Woche, 45-60 Minuten"
+    },
+    {
+      "id": "ex_walking_incline_001",
+      "name": "Power Walking (Steigung)",
+      "category": "Cardio",
+      "targetMuscles": ["Beine", "Gluteus", "Kardiovaskulär"],
+      "difficulty": "Leicht",
+      "whyImportant": "Gelenkschonend, funktionell, überall machbar. Mit Steigung = mehr Intensität ohne Lauf-Impact.",
+      "modifications": "Flach → 5-10% Steigung → 12-15% Steigung bei Zone 2 Intensität",
+      "gifUrl": "https://static.exercisedb.dev/media/incline-walking.gif",
+      "reps": "Täglich möglich: 30-60 Minuten"
+    },
+    {
+      "id": "ex_swimming_001",
+      "name": "Schwimmen (Dauermethode)",
+      "category": "Cardio",
+      "targetMuscles": ["Ganzer Körper", "Kardiovaskulär", "Schultern"],
+      "difficulty": "Leicht-Mittel",
+      "whyImportant": "Zero-Impact. Perfekt bei Gelenkproblemen. Ganzkörper-Cardio + Kraft. Schultermobilität.",
+      "modifications": "Brustschwimmen (leichter) → Kraul → Intervalle",
+      "gifUrl": "https://static.exercisedb.dev/media/swimming.gif",
+      "reps": "2-3x pro Woche, 30-45 Minuten"
+    },
+    {
+      "id": "ex_jump_rope_001",
+      "name": "Seilspringen (leicht)",
+      "category": "Cardio",
+      "targetMuscles": ["Wade", "Kardiovaskulär", "Koordination", "Knochendichte"],
+      "difficulty": "Mittel",
+      "whyImportant": "Impact-Training = Knochendichte-Stimulus. Koordination. Hocheffizient.",
+      "modifications": "Single Jumps → Double Unders (nur für Fortgeschrittene) | VORSICHT bei Knieproblemen",
+      "gifUrl": "https://static.exercisedb.dev/media/jump-rope.gif",
+      "reps": "2-3x pro Woche, 5-10 Minuten"
+    }
+  ],
+
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-02-09",
+    "lastUpdated": "2026-02-09",
+    "sources": [
+      "Peter Attia, Outlive (2023)",
+      "Andrew Huberman, Foundational Fitness Protocol",
+      "Harvard Push-up Study (Yang et al., JAMA 2019)",
+      "Grip Strength Meta-Analysis (Bohannon 2019, PMC6778477)",
+      "VO2 Max Mortality Study (Kodama et al., JAMA 2009)",
+      "AGEIST Fitness Benchmarks (Nick Holt)",
+      "CDC Fall Prevention Guidelines",
+      "NIH Osteoporosis Guidelines",
+      "WHO T-Score Criteria"
+    ],
+    "targetAudience": "Erwachsene 55-70 Jahre",
+    "language": "de",
+    "author": "AI Research Specialist - Fit & Stark Dashboard"
+  }
+}

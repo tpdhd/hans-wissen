@@ -35,14 +35,20 @@ export default function TabUeberblick() {
               Krafttraining für Walkerinnen
             </h1>
             <p className="text-lg text-text-light max-w-2xl leading-relaxed mb-4">
-              Du gehst bereits 1–2 Stunden täglich — super! Damit hast du eine starke
-              Ausdauer-Basis. Was fehlt: <strong>gezieltes Krafttraining</strong>, das
+              Du gehst bereits täglich spazieren — fantastisch! Damit hast du eine starke
+              Ausdauer-Basis (Zone 2 Cardio). Was jetzt noch fehlt: <strong>gezieltes Krafttraining</strong>, das
               Muskeln aufbaut, Knochen stärkt und dich noch belastbarer macht.
               Bodyweight-Übungen zu Hause reichen völlig — kein Fitnessstudio nötig.
             </p>
-            <div className="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm rounded-xl px-4 py-2.5 text-sm font-medium text-primary-dark border border-primary/10">
-              <Sparkles className="w-4 h-4 text-primary" />
-              2–3× pro Woche je 20–30 Min. Krafttraining — zusätzlich zu deinen Spaziergängen
+            <div className="space-y-2">
+              <div className="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm rounded-xl px-4 py-2.5 text-sm font-medium text-primary-dark border border-primary/10">
+                <Sparkles className="w-4 h-4 text-primary" />
+                <strong>Das Optimum:</strong> 3× Kraft (30 Min.) + 3-4× Walking/Woche
+              </div>
+              <p className="text-sm text-text-light/70 italic max-w-xl">
+                Nach Huberman's Foundational Fitness Protocol & Dr. Peter Attia — wissenschaftlich fundiert,
+                realistisch für 60+, und du machst das Walking schon fast!
+              </p>
             </div>
           </div>
         </div>

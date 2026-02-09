@@ -8,6 +8,7 @@ interface ExerciseCardNewProps {
   difficulty: 'Anfänger' | 'Mittel'
   sets: string
   images?: { start: string; end: string }
+  gifUrl?: string
   instructions: string[]
   safetyNote?: { type: 'safe' | 'caution'; text: string }
   tip?: string
@@ -25,11 +26,15 @@ export default function ExerciseCardNew({
   difficulty,
   sets,
   images,
+  gifUrl,
   instructions,
   safetyNote,
   tip,
 }: ExerciseCardNewProps) {
   const [expanded, setExpanded] = useState(false)
+
+  // Use GIF if available, otherwise fall back to static images
+  const thumbnailUrl = gifUrl || images?.start
 
   return (
     <div className="bg-white rounded-2xl border border-border overflow-hidden shadow-sm card-hover">
@@ -38,10 +43,10 @@ export default function ExerciseCardNew({
         className="w-full text-left px-5 py-4 flex items-center gap-4"
       >
         {/* Small thumbnail */}
-        {images && (
+        {thumbnailUrl && (
           <div className="w-14 h-14 rounded-xl overflow-hidden shrink-0 border border-border bg-secondary/30">
             <img
-              src={images.start}
+              src={thumbnailUrl}
               alt={title}
               className="w-full h-full object-cover"
               loading="lazy"
@@ -67,8 +72,22 @@ export default function ExerciseCardNew({
 
       <div className={`collapsible-content ${expanded ? 'open' : ''}`}>
         <div className="px-5 pb-5 border-t border-border pt-4 space-y-4">
-          {/* Exercise images — start and end position */}
-          {images && (
+          {/* Exercise visual — animated GIF or static images */}
+          {gifUrl ? (
+            <div className="flex justify-center">
+              <div className="relative rounded-xl overflow-hidden border border-border shadow-sm bg-secondary/10 max-w-md">
+                <img
+                  src={gifUrl}
+                  alt={`${title} — Bewegungsablauf`}
+                  className="w-full"
+                  loading="lazy"
+                />
+                <div className="absolute top-2 right-2 bg-primary/90 text-white text-[10px] font-bold px-2 py-1 rounded-full">
+                  ANIMIERT
+                </div>
+              </div>
+            </div>
+          ) : images ? (
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <img
@@ -89,7 +108,7 @@ export default function ExerciseCardNew({
                 <p className="text-xs text-text-light text-center mt-1">Endposition</p>
               </div>
             </div>
-          )}
+          ) : null}
 
           {/* Step by step instructions */}
           <div>

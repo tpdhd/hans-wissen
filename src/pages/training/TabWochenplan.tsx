@@ -9,13 +9,13 @@ export default function TabWochenplan() {
       <FadeInSection>
         <SectionCard title="Dein Wochenplan" icon={<Calendar className="w-6 h-6" />}>
           <p className="text-text-light mb-2">
-            Du gehst bereits täglich 1–2 Stunden — das bleibt dein Fundament!
-            Dieser Plan fügt <strong>3 kurze Krafteinheiten pro Woche</strong> hinzu.
-            An den anderen Tagen gehst du wie gewohnt spazieren.
+            Du gehst bereits täglich spazieren — perfekt, das ist dein <strong>Zone 2 Cardio</strong>!
+            Dieser Plan fügt <strong>3 Krafteinheiten (à 30 Min.)</strong> hinzu.
+            Das entspricht dem wissenschaftlich fundierten Optimum: <strong>3× Kraft + 3-4× Ausdauer</strong> pro Woche.
           </p>
           <p className="text-text-light mb-6 text-sm">
             Zwischen Krafttrainingstagen liegen mindestens 48 Stunden Pause für die
-            Muskelerholung. Dein Walking kannst du jeden Tag machen.
+            Muskelerholung. Dein Walking kannst du jeden Tag machen — es fördert sogar die Regeneration!
           </p>
 
           <div className="mb-6">

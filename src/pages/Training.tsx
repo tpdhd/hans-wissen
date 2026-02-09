@@ -1,8 +1,9 @@
-import { Target, Dumbbell, Calendar, Bone, ShieldAlert, Pill, BookOpen } from 'lucide-react'
+import { Target, Dumbbell, Calendar, Bone, ShieldAlert, Pill, BookOpen, Trophy } from 'lucide-react'
 import TrainingTabs from './training/TrainingTabs'
 import type { TabItem } from './training/TrainingTabs'
+import TabFitnessStatus from './training/TabFitnessStatus'
 import TabUeberblick from './training/TabUeberblick'
-import TabUebungen from './training/TabUebungen'
+import TabUebungen from './training/TabUebungenExpanded'
 import TabWochenplan from './training/TabWochenplan'
 import TabKnochen from './training/TabKnochen'
 import TabRuecken from './training/TabRuecken'
@@ -10,6 +11,7 @@ import TabNahrung from './training/TabNahrung'
 import TabQuellen from './training/TabQuellen'
 
 const tabs: TabItem[] = [
+  { id: 'ziele', label: 'Dein Ziel', icon: <Trophy className="w-4 h-4" />, component: TabFitnessStatus },
   { id: 'ueberblick', label: 'Überblick', icon: <Target className="w-4 h-4" />, component: TabUeberblick },
   { id: 'uebungen', label: 'Übungen', icon: <Dumbbell className="w-4 h-4" />, component: TabUebungen },
   { id: 'wochenplan', label: 'Wochenplan', icon: <Calendar className="w-4 h-4" />, component: TabWochenplan },
