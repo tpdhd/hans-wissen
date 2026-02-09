@@ -4,11 +4,13 @@ interface MedTermProps {
 }
 
 /**
- * Wraps medical terms in a clickable link to Wiktionary.
+ * Wraps medical terms in a clickable link to Google search.
+ * Opens a "Was ist [term] einfach erklärt" search for clear, concise answers.
  * Usage: <MedTerm term="Osteoporose" /> or <MedTerm term="Osteoporose">custom text</MedTerm>
  */
 export default function MedTerm({ term, children }: MedTermProps) {
-  const url = `https://de.wiktionary.org/wiki/${encodeURIComponent(term)}`
+  const query = `Was ist ${term} einfach erklärt`
+  const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`
   
   return (
     <a
@@ -16,7 +18,7 @@ export default function MedTerm({ term, children }: MedTermProps) {
       target="_blank"
       rel="noopener noreferrer"
       className="med-term"
-      title={`${term} im Wörterbuch nachschlagen`}
+      title={`"${term}" bei Google nachschlagen`}
     >
       {children || term}
     </a>
