@@ -77,10 +77,10 @@ export default function Dashboard() {
         <DashboardCard
           title="Vitamine"
           subtitle="Nährstoffe & Ergänzung"
-          icon={<Pill className="w-5 h-5 text-white/70" />}
-          disabled
-          bgClass="bg-gradient-to-br from-stone-50 to-stone-100 border border-stone-200/60"
-          iconBgClass="bg-stone-300"
+          icon={<Pill className="w-5 h-5 text-white" />}
+          to="/vitamins"
+          bgClass="bg-gradient-to-br from-green-50 to-emerald-100 border-2 border-green-200/60 shadow-md"
+          iconBgClass="bg-emerald-500/80"
         />
         <DashboardCard
           title="Technik"

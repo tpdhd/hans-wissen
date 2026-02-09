@@ -1,0 +1,382 @@
+{
+  "vitamins": [
+    {
+      "id": "vitamin-d",
+      "name": "Vitamin D3",
+      "funktion": "Knochengesundheit, Immunsystem, Muskelkraft, Stimmung. Das 'Sonnenvitamin' ist essentiell für Calciumaufnahme.",
+      "tagesbedarf": "15 µg (600 IE) RDA, viele Experten empfehlen 25-50 µg (1000-2000 IE)",
+      "quellen": "Lachs, Makrele, Eigelb, angereicherte Milch. Körpereigene Produktion durch Sonnenlicht (15-30 Min./Tag)",
+      "mangel": "Knochenschwäche (Osteoporose), Muskelschwäche, erhöhte Infektanfälligkeit, Depression, Müdigkeit",
+      "ueberdosis": "Über 100 µg/Tag langfristig: Hyperkalzämie (zu viel Calcium im Blut), Nierenschäden",
+      "tipp": "Immer mit K2 kombinieren! D3 erhöht Calcium-Aufnahme, K2 sorgt dafür, dass es in die Knochen geht (nicht in Arterien)."
+    },
+    {
+      "id": "vitamin-k2",
+      "name": "Vitamin K2 (MK-7)",
+      "funktion": "Lenkt Calcium in Knochen & Zähne (statt Arterien). Wichtig für Herz-Kreislauf-Gesundheit und Knochendichte.",
+      "tagesbedarf": "120 µg (K gesamt), für K2 speziell: 100-200 µg empfohlen",
+      "quellen": "Natto (fermentierte Sojabohnen), Käse (Gouda, Brie), Eigelb, Leber, fermentierte Lebensmittel",
+      "mangel": "Arterienverkalkung, geringere Knochendichte, erhöhtes Osteoporose- und Herz-Kreislauf-Risiko",
+      "ueberdosis": "Keine bekannt bei üblichen Dosen",
+      "tipp": "Perfekt mit D3 kombinieren (D3+K2 Kombi-Präparate). MK-7 Form hat längere Halbwertszeit als MK-4."
+    },
+    {
+      "id": "vitamin-c",
+      "name": "Vitamin C",
+      "funktion": "Antioxidans, Immunsystem, Kollagenbildung, Wundheilung, verbessert Eisenaufnahme aus pflanzlichen Quellen.",
+      "tagesbedarf": "90 mg (Männer)",
+      "quellen": "Paprika, Brokkoli, Zitrusfrüchte, Erdbeeren, Kiwi, Rosenkohl, Sanddorn",
+      "mangel": "Müdigkeit, geschwächtes Immunsystem, schlechte Wundheilung, Skorbut (extrem selten)",
+      "ueberdosis": "Über 2000 mg/Tag: Durchfall, Magenbeschwerden, bei sehr hohen Dosen Nierensteine möglich",
+      "tipp": "Nimm Vitamin C zusammen mit eisenreichen pflanzlichen Lebensmitteln (Linsen, Spinat) für bessere Aufnahme."
+    },
+    {
+      "id": "vitamin-b12",
+      "name": "Vitamin B12",
+      "funktion": "Blutbildung, Nervensystem, DNA-Synthese, Energiestoffwechsel. Kritisch für Veganer/Vegetarier.",
+      "tagesbedarf": "2,4 µg",
+      "quellen": "Fleisch, Fisch, Eier, Milchprodukte. Pflanzliche Quellen enthalten kein verwertbares B12!",
+      "mangel": "Müdigkeit, Blutarmut (megaloblastäre Anämie), Nervenschäden (Kribbeln, Taubheit), kognitive Probleme",
+      "ueberdosis": "Sehr selten, überschüssiges B12 wird ausgeschieden",
+      "tipp": "Veganer/Vegetarier müssen supplementieren! Methylcobalamin oder Hydroxocobalamin sind gut verfügbar."
+    },
+    {
+      "id": "vitamin-b6",
+      "name": "Vitamin B6",
+      "funktion": "Proteinstoffwechsel, Nervensystem, Immunfunktion, Blutbildung, Hormonregulation.",
+      "tagesbedarf": "1,3 mg (bis 50 Jahre), 1,7 mg (50+)",
+      "quellen": "Hähnchen, Lachs, Kartoffeln, Bananen, Kichererbsen, Haferflocken",
+      "mangel": "Hautprobleme, Entzündungen der Mundwinkel, geschwächtes Immunsystem, Verwirrtheit",
+      "ueberdosis": "Über 100 mg/Tag langfristig: Nervenschäden (Neuropathie)",
+      "tipp": "Spielt zusammen mit B12 und Folsäure eine Rolle im Homocystein-Stoffwechsel (wichtig für Herzgesundheit)."
+    },
+    {
+      "id": "folsaeure",
+      "name": "Folsäure (B9)",
+      "funktion": "DNA-Synthese, Zellteilung, Blutbildung. Essentiell in der Schwangerschaft für Neuralrohr-Entwicklung.",
+      "tagesbedarf": "400 µg DFE (Dietary Folate Equivalents)",
+      "quellen": "Grünes Blattgemüse, Hülsenfrüchte, Spargel, Brokkoli, Avocado, angereicherte Getreideprodukte",
+      "mangel": "Müdigkeit, Blutarmut, erhöhtes Homocystein (Herz-Kreislauf-Risiko), bei Schwangeren: Neuralrohrdefekte",
+      "ueberdosis": "Über 1000 µg/Tag: kann B12-Mangel maskieren",
+      "tipp": "Methylfolat ist besser verfügbar als synthetische Folsäure. Wichtig mit B6 und B12 für Homocystein-Kontrolle."
+    },
+    {
+      "id": "vitamin-a",
+      "name": "Vitamin A",
+      "funktion": "Sehkraft (besonders Nachtsicht), Immunsystem, Hautgesundheit, Zellwachstum.",
+      "tagesbedarf": "900 µg RAE (Retinol Activity Equivalents)",
+      "quellen": "Leber, Karotten, Süßkartoffeln, Spinat, Kürbis, Eigelb (als Retinol oder Beta-Carotin)",
+      "mangel": "Nachtblindheit, trockene Haut, geschwächtes Immunsystem, Wachstumsstörungen",
+      "ueberdosis": "Über 3000 µg/Tag: Leberschäden, Knochenprobleme, Geburtsfehler (Schwangerschaft)",
+      "tipp": "Beta-Carotin aus Pflanzen ist sicherer als Retinol aus tierischen Quellen (kein Überdosierungs-Risiko)."
+    },
+    {
+      "id": "vitamin-e",
+      "name": "Vitamin E",
+      "funktion": "Starkes Antioxidans, schützt Zellen vor freien Radikalen, unterstützt Immunsystem.",
+      "tagesbedarf": "15 mg (Alpha-Tocopherol)",
+      "quellen": "Nüsse (Mandeln), Sonnenblumenkerne, Pflanzenöle, Spinat, Avocado",
+      "mangel": "Selten. Muskelschwäche, Sehstörungen, geschwächtes Immunsystem",
+      "ueberdosis": "Über 1000 mg/Tag: erhöhtes Blutungsrisiko",
+      "tipp": "Natürliche Formen (d-alpha-Tocopherol) sind besser als synthetische (dl-alpha-Tocopherol)."
+    },
+    {
+      "id": "vitamin-b1",
+      "name": "Vitamin B1 (Thiamin)",
+      "funktion": "Energiestoffwechsel (Kohlenhydrate), Nervensystem, Herzfunktion.",
+      "tagesbedarf": "1,2 mg",
+      "quellen": "Vollkornprodukte, Schweinefleisch, Hülsenfrüchte, Nüsse, Sonnenblumenkerne",
+      "mangel": "Müdigkeit, Reizbarkeit, Muskelschwäche, Herzprobleme. Extrem: Beriberi",
+      "ueberdosis": "Sehr selten, überschüssiges wird ausgeschieden",
+      "tipp": "Wichtig für aktive Menschen und bei kohlenhydratreicher Ernährung."
+    },
+    {
+      "id": "vitamin-b2",
+      "name": "Vitamin B2 (Riboflavin)",
+      "funktion": "Energiestoffwechsel, Hautgesundheit, Augengesundheit, Antioxidans.",
+      "tagesbedarf": "1,3 mg",
+      "quellen": "Milchprodukte, Eier, Mandeln, Spinat, Pilze, Leber",
+      "mangel": "Rissige Mundwinkel, entzündete Zunge, Hautprobleme, Lichtempfindlichkeit",
+      "ueberdosis": "Sehr selten",
+      "tipp": "B2 färbt Urin leuchtend gelb — das ist normal und harmlos!"
+    },
+    {
+      "id": "vitamin-b3",
+      "name": "Vitamin B3 (Niacin)",
+      "funktion": "Energiestoffwechsel, DNA-Reparatur, Cholesterin-Regulation, Hautgesundheit.",
+      "tagesbedarf": "16 mg NE (Niacin Equivalents)",
+      "quellen": "Fleisch, Fisch, Erdnüsse, Pilze, Avocado, Vollkornprodukte",
+      "mangel": "Müdigkeit, Hautprobleme (Dermatitis), Durchfall, Demenz. Extrem: Pellagra",
+      "ueberdosis": "Über 35 mg/Tag (Nicotinsäure-Form): Flush (Hautrötung), Leberschäden bei sehr hohen Dosen",
+      "tipp": "Nicotinamid-Form hat keinen Flush-Effekt. Niacin kann Cholesterin senken (nur unter ärztlicher Kontrolle)."
+    },
+    {
+      "id": "vitamin-b5",
+      "name": "Vitamin B5 (Pantothensäure)",
+      "funktion": "Energiestoffwechsel, Hormonproduktion, Neurotransmitter-Synthese, Wundheilung.",
+      "tagesbedarf": "5 mg AI (Adequate Intake)",
+      "quellen": "Fast alle Lebensmittel! Besonders Leber, Pilze, Avocado, Hühnchen, Süßkartoffeln",
+      "mangel": "Sehr selten (Pantothensäure ist überall). Müdigkeit, Kopfschmerzen, Reizbarkeit",
+      "ueberdosis": "Sehr selten",
+      "tipp": "Mangel praktisch unmöglich bei ausgewogener Ernährung."
+    },
+    {
+      "id": "biotin",
+      "name": "Biotin (B7)",
+      "funktion": "Stoffwechsel von Fetten, Kohlenhydraten, Proteinen. Haare, Haut, Nägel.",
+      "tagesbedarf": "30 µg AI",
+      "quellen": "Eier (gekocht!), Nüsse, Samen, Leber, Süßkartoffeln, Spinat",
+      "mangel": "Haarausfall, brüchige Nägel, Hautausschlag, Müdigkeit (sehr selten)",
+      "ueberdosis": "Sehr selten",
+      "tipp": "Rohes Eiweiß enthält Avidin, das Biotin bindet — Eier immer kochen!"
+    }
+  ],
+  "minerals": [
+    {
+      "id": "magnesium",
+      "name": "Magnesium",
+      "funktion": "Über 300 Enzyme beteiligt. Muskelfunktion, Nervensystem, Knochengesundheit, Energiestoffwechsel, Schlaf.",
+      "tagesbedarf": "400-420 mg",
+      "quellen": "Kürbiskerne, Mandeln, Spinat, Avocado, dunkle Schokolade, Vollkornprodukte, Hülsenfrüchte",
+      "mangel": "Muskelkrämpfe, Zuckungen, Müdigkeit, Schlafstörungen, Kopfschmerzen, Herzrhythmusstörungen",
+      "ueberdosis": "Bei Niereninsuffizienz möglich. Durchfall bei sehr hohen Dosen (>600 mg auf einmal)",
+      "tipp": "Citrat oder Glycinat für beste Aufnahme. Oxide weniger gut. Abends nehmen fördert Schlaf."
+    },
+    {
+      "id": "zink",
+      "name": "Zink",
+      "funktion": "Immunsystem, Wundheilung, Testosteron-Produktion, Proteinsynthese, DNA-Synthese, Geschmacks- und Geruchssinn.",
+      "tagesbedarf": "11 mg",
+      "quellen": "Austern, Rindfleisch, Kürbiskerne, Linsen, Kichererbsen, Cashews, Eier",
+      "mangel": "Geschwächtes Immunsystem, schlechte Wundheilung, Haarausfall, Geschmacksverlust, niedriges Testosteron",
+      "ueberdosis": "Über 40 mg/Tag langfristig: Kupfermangel, geschwächtes Immunsystem",
+      "tipp": "NICHT zusammen mit Kupfer oder Eisen nehmen (Konkurrenz). Getrennte Einnahme (z.B. Zink abends, Eisen morgens)."
+    },
+    {
+      "id": "eisen",
+      "name": "Eisen",
+      "funktion": "Sauerstofftransport (Hämoglobin), Energieproduktion, Immunfunktion.",
+      "tagesbedarf": "8 mg (Männer), 18 mg (Frauen vor Menopause)",
+      "quellen": "Rotes Fleisch, Leber, Linsen, Spinat, Kürbiskerne, Quinoa. Häm-Eisen (tierisch) besser verfügbar.",
+      "mangel": "Müdigkeit, Blässe, Kurzatmigkeit, kalte Hände/Füße, brüchige Nägel, Konzentrationsprobleme",
+      "ueberdosis": "Über 45 mg/Tag: Verstopfung, Übelkeit. Langfristig: Organspeicherung (Hämochromatose)",
+      "tipp": "Mit Vitamin C kombinieren (verbessert Aufnahme aus pflanzlichen Quellen). NICHT mit Calcium oder Zink."
+    },
+    {
+      "id": "calcium",
+      "name": "Calcium",
+      "funktion": "Knochen & Zähne, Muskelkontraktion, Nervenleitung, Blutgerinnung, Herzrhythmus.",
+      "tagesbedarf": "1000 mg (bis 50), 1200 mg (50+)",
+      "quellen": "Milchprodukte, grünes Blattgemüse, Brokkoli, Mandeln, Sardinen mit Gräten, angereichertes Getreide",
+      "mangel": "Osteoporose, Muskelkrämpfe, Kribbeln, Herzrhythmusstörungen",
+      "ueberdosis": "Über 2500 mg/Tag: Nierensteine, beeinträchtigt Aufnahme von Eisen, Zink, Magnesium",
+      "tipp": "NICHT zusammen mit Eisen, Zink oder Magnesium (Konkurrenz). Calcium morgens, Rest abends."
+    },
+    {
+      "id": "kalium",
+      "name": "Kalium",
+      "funktion": "Blutdruckregulation, Flüssigkeitshaushalt, Muskel- und Nervenfunktion, Herzrhythmus.",
+      "tagesbedarf": "3400 mg AI",
+      "quellen": "Bananen, Kartoffeln, Süßkartoffeln, Spinat, Avocado, Bohnen, Lachs",
+      "mangel": "Muskelschwäche, Krämpfe, Müdigkeit, Herzrhythmusstörungen, Bluthochdruck",
+      "ueberdosis": "Bei Niereninsuffizienz gefährlich. Sonst selten aus Nahrung.",
+      "tipp": "Senkt Blutdruck. Balance mit Natrium ist wichtig (mehr Kalium, weniger Natrium = gesünder)."
+    },
+    {
+      "id": "selen",
+      "name": "Selen",
+      "funktion": "Antioxidans, Schilddrüsenfunktion, Immunsystem, DNA-Synthese, Fortpflanzung.",
+      "tagesbedarf": "55 µg",
+      "quellen": "Paranüsse (1-2 reichen!), Fisch, Fleisch, Eier, Sonnenblumenkerne",
+      "mangel": "Geschwächtes Immunsystem, Schilddrüsenprobleme, Muskelschwäche, Herzprobleme",
+      "ueberdosis": "Über 400 µg/Tag: Haarausfall, brüchige Nägel, Übelkeit, Müdigkeit",
+      "tipp": "1-2 Paranüsse pro Tag decken Bedarf komplett. Nicht übertreiben!"
+    },
+    {
+      "id": "jod",
+      "name": "Jod",
+      "funktion": "Schilddrüsenhormone (T3, T4), Stoffwechsel, Wachstum, Gehirnentwicklung.",
+      "tagesbedarf": "150 µg",
+      "quellen": "Jodiertes Salz, Seefisch, Meeresfrüchte, Algen, Milchprodukte, Eier",
+      "mangel": "Kropf, Schilddrüsenunterfunktion, Müdigkeit, Gewichtszunahme, kognitive Probleme",
+      "ueberdosis": "Über 1100 µg/Tag: Schilddrüsenprobleme",
+      "tipp": "Jodiertes Salz verwenden! Besonders wichtig in Deutschland (jodarm)."
+    },
+    {
+      "id": "chrom",
+      "name": "Chrom",
+      "funktion": "Blutzuckerregulation (Insulin-Sensitivität), Makronährstoff-Stoffwechsel.",
+      "tagesbedarf": "35 µg AI (Männer), 25 µg (Frauen)",
+      "quellen": "Brokkoli, Trauben, Vollkornprodukte, Fleisch, Nüsse",
+      "mangel": "Gestörter Blutzucker, erhöhtes Diabetes-Risiko (selten bei normaler Ernährung)",
+      "ueberdosis": "Sehr selten aus Nahrung",
+      "tipp": "Wichtig für Blutzuckerkontrolle, besonders bei Insulin-Resistenz."
+    },
+    {
+      "id": "mangan",
+      "name": "Mangan",
+      "funktion": "Knochenbildung, Antioxidans, Stoffwechsel (Kohlenhydrate, Aminosäuren), Wundheilung.",
+      "tagesbedarf": "2,3 mg AI",
+      "quellen": "Nüsse, Vollkornprodukte, Tee, Hülsenfrüchte, Ananas, Spinat",
+      "mangel": "Sehr selten. Knochenprobleme, beeinträchtigter Stoffwechsel",
+      "ueberdosis": "Sehr selten aus Nahrung. Über 11 mg/Tag langfristig: neurologische Probleme",
+      "tipp": "Bei normaler Ernährung kein Mangel zu erwarten."
+    },
+    {
+      "id": "kupfer",
+      "name": "Kupfer",
+      "funktion": "Eisenstoffwechsel, Bindegewebe, Antioxidans, Nervensystem, Immunfunktion.",
+      "tagesbedarf": "900 µg",
+      "quellen": "Leber, Austern, Nüsse, Samen, dunkle Schokolade, Hülsenfrüchte",
+      "mangel": "Anämie (trotz genug Eisen), Knochenprobleme, Immunschwäche, neurologische Probleme",
+      "ueberdosis": "Über 10 mg/Tag: Leberschäden, Magen-Darm-Probleme",
+      "tipp": "NICHT zusammen mit Zink (Konkurrenz). Balance ist wichtig: Zink/Kupfer-Verhältnis ca. 10:1."
+    }
+  ],
+  "supplements": [
+    {
+      "id": "d3-k2-kombi",
+      "name": "Vitamin D3 + K2 Kombi",
+      "warum": "Die meisten Menschen in Deutschland haben D3-Mangel (fehlende Sonne). K2 sorgt dafür, dass das durch D3 aufgenommene Calcium in die Knochen geht (nicht in Arterien).",
+      "dosierung": "2000-4000 IE D3 + 100-200 µg K2 (MK-7) täglich",
+      "einnahme": "Morgens zum Essen (fettlöslich). Mit fetthaltiger Mahlzeit (z.B. Avocado, Nüsse).",
+      "interaktionen": "Keine negativen. D3 allein ohne K2 kann langfristig Arterienverkalkung fördern.",
+      "qualitaet": "Tropfen oder Kapseln. MK-7 (all-trans Form) ist besser als MK-4. Achte auf Öl-Basis (besser als Pulver)."
+    },
+    {
+      "id": "omega3",
+      "name": "Omega-3 (EPA/DHA)",
+      "warum": "Entzündungshemmend, Herzgesundheit, Gehirnfunktion, Gelenke. Wichtig, wenn du wenig fetten Fisch isst.",
+      "dosierung": "1-2 g EPA+DHA kombiniert täglich. Verhältnis EPA:DHA ca. 2:1 ideal.",
+      "einnahme": "Zum Essen (fettlöslich). Kühl lagern. Kann aufgeteilt werden (z.B. 2× täglich).",
+      "interaktionen": "Blutverdünnend bei sehr hohen Dosen (>3 g/Tag). Mit Arzt absprechen bei Blutverdünnern.",
+      "qualitaet": "Triglycerid-Form besser als Ethyl-Ester. IFOS-Zertifikat (Reinheit, keine Schwermetalle). Frische prüfen (kein fischiger Geruch)."
+    },
+    {
+      "id": "magnesium",
+      "name": "Magnesium",
+      "warum": "Häufiger Mangel. Wichtig für Schlaf, Muskeln, Stressabbau, über 300 Enzymreaktionen.",
+      "dosierung": "300-400 mg täglich. Bei Bedarf aufteilen (z.B. 200 mg morgens, 200 mg abends).",
+      "einnahme": "Abends fördert Schlaf. Nicht zusammen mit Calcium (Konkurrenz).",
+      "interaktionen": "Citrat kann bei hohen Dosen (>500 mg auf einmal) abführend wirken.",
+      "qualitaet": "Citrat oder Glycinat = beste Aufnahme. Oxide = schlechte Aufnahme, günstig. Vermeide Oxide!"
+    },
+    {
+      "id": "zink",
+      "name": "Zink",
+      "warum": "Immunsystem, Testosteron, Wundheilung. Viele ältere Menschen haben suboptimale Werte.",
+      "dosierung": "15-25 mg täglich (nicht dauerhaft über 40 mg)",
+      "einnahme": "Abends, 1-2 Std. nach dem Essen (kann Übelkeit verursachen bei leerem Magen).",
+      "interaktionen": "NICHT mit Kupfer, Eisen oder Calcium zusammen nehmen (Konkurrenz).",
+      "qualitaet": "Picolinat, Bisglycinat oder Gluconat gut verfügbar. Vermeide Oxide."
+    },
+    {
+      "id": "kreatin",
+      "name": "Kreatin Monohydrat",
+      "warum": "Muskelkraft, Muskelmasse, kognitive Funktion. Eines der am besten erforschten Supplements.",
+      "dosierung": "5 g täglich (keine Ladephase nötig). Dauerhaft sicher.",
+      "einnahme": "Jederzeit, mit Flüssigkeit. Timing egal. Mit Kohlenhydraten etwas besser.",
+      "interaktionen": "Keine. Viel trinken (Kreatin bindet Wasser in Muskeln).",
+      "qualitaet": "Creapure® (deutsches Markenkreatin) = höchste Reinheit. Monohydrat ist die beste Form."
+    },
+    {
+      "id": "kollagen",
+      "name": "Kollagen (Typ I & III)",
+      "warum": "Gelenke, Haut, Bindegewebe. Ab 30 sinkt körpereigene Produktion um ca. 1 % pro Jahr.",
+      "dosierung": "10-15 g täglich (hydrolysiertes Kollagen-Peptid)",
+      "einnahme": "Morgens im Kaffee/Smoothie. Mit Vitamin C kombinieren (fördert Kollagen-Synthese).",
+      "interaktionen": "Keine.",
+      "qualitaet": "Weidehaltung (Grass-fed). Hydrolysiert = beste Aufnahme. Typ I+III kombiniert ideal."
+    },
+    {
+      "id": "probiotika",
+      "name": "Probiotika",
+      "warum": "Darmgesundheit, Immunsystem (70 % im Darm), Stimmung (Darm-Hirn-Achse).",
+      "dosierung": "10-50 Milliarden KBE (koloniebildende Einheiten). Verschiedene Stämme wichtig.",
+      "einnahme": "Morgens nüchtern oder abends vor dem Schlafen. Kühl lagern (viele Präparate).",
+      "interaktionen": "Nicht zusammen mit Antibiotika (2-3 Std. Abstand).",
+      "qualitaet": "Mehrere Stämme (z.B. Lactobacillus, Bifidobacterium). Magensaftresistente Kapseln. Frische prüfen (Verfallsdatum)."
+    }
+  ],
+  "interactions": {
+    "synergies": [
+      {
+        "combo": "Vitamin D3 + K2",
+        "effect": "D3 erhöht Calcium-Aufnahme, K2 lenkt es in Knochen statt Arterien",
+        "recommendation": "IMMER zusammen nehmen! Optimal 2000-4000 IE D3 + 100-200 µg K2."
+      },
+      {
+        "combo": "Vitamin C + Eisen (pflanzlich)",
+        "effect": "Vitamin C verbessert Aufnahme von pflanzlichem Eisen um das 3-4-fache",
+        "recommendation": "Linsen, Spinat, Haferflocken mit Paprika, Zitrone oder Orangensaft kombinieren."
+      },
+      {
+        "combo": "Magnesium + Vitamin D",
+        "effect": "Magnesium aktiviert Vitamin D. D3-Mangel oft durch Mg-Mangel verstärkt.",
+        "recommendation": "Wenn du D3 nimmst, achte auf ausreichend Magnesium (300-400 mg/Tag)."
+      },
+      {
+        "combo": "Omega-3 + Vitamin E",
+        "effect": "Vitamin E schützt Omega-3-Fettsäuren vor Oxidation",
+        "recommendation": "Hochwertige Omega-3-Präparate enthalten bereits Vitamin E als Antioxidans."
+      },
+      {
+        "combo": "Kreatin + Kohlenhydrate",
+        "effect": "Insulin (durch Kohlenhydrate) verbessert Kreatin-Aufnahme in Muskeln",
+        "recommendation": "Kreatin mit Fruchtsaft oder nach kohlenhydratreicher Mahlzeit."
+      },
+      {
+        "combo": "Kollagen + Vitamin C",
+        "effect": "Vitamin C ist Co-Faktor für körpereigene Kollagen-Synthese",
+        "recommendation": "Kollagen mit Vitamin-C-reichem Obst (Beeren, Kiwi) oder Supplement."
+      },
+      {
+        "combo": "B-Vitamine untereinander",
+        "effect": "B6, B12, Folsäure arbeiten zusammen im Homocystein-Stoffwechsel",
+        "recommendation": "B-Komplex-Präparate enthalten alle B-Vitamine in ausgewogener Dosierung."
+      }
+    ],
+    "antagonisms": [
+      {
+        "combo": "Calcium + Eisen",
+        "effect": "Calcium blockiert Eisen-Aufnahme (Konkurrenz um Transporter)",
+        "recommendation": "Getrennte Einnahme: Calcium morgens, Eisen abends (oder umgekehrt). Mind. 2 Std. Abstand."
+      },
+      {
+        "combo": "Zink + Kupfer",
+        "effect": "Hohe Zink-Dosen verdrängen Kupfer → Kupfermangel möglich",
+        "recommendation": "Langfristig >40 mg Zink/Tag vermeiden. Oder Kupfer separat ergänzen (1-2 mg)."
+      },
+      {
+        "combo": "Zink + Eisen",
+        "effect": "Konkurrieren um Absorption",
+        "recommendation": "Getrennte Einnahme: Zink abends, Eisen morgens."
+      },
+      {
+        "combo": "Calcium + Magnesium",
+        "effect": "Konkurrenz bei hohen Dosen (>500 mg)",
+        "recommendation": "Getrennte Einnahme oder kombiniert nur bis 300 mg pro Nährstoff."
+      },
+      {
+        "combo": "Calcium + Zink",
+        "effect": "Calcium beeinträchtigt Zink-Aufnahme",
+        "recommendation": "Getrennte Einnahme bevorzugt."
+      },
+      {
+        "combo": "Koffein + Eisen",
+        "effect": "Koffein (Kaffee, Tee) hemmt Eisen-Aufnahme",
+        "recommendation": "Eisen-Präparate nicht mit Kaffee/Tee einnehmen. 1-2 Std. Abstand."
+      },
+      {
+        "combo": "Antibiotika + Probiotika",
+        "effect": "Antibiotika töten Probiotika",
+        "recommendation": "2-3 Std. Abstand zwischen Einnahmen. Probiotika WÄHREND und nach Antibiotika-Kur."
+      },
+      {
+        "combo": "Ballaststoffe + Medikamente/Supplements",
+        "effect": "Hohe Ballaststoff-Dosen können Aufnahme reduzieren",
+        "recommendation": "Supplements nicht zusammen mit Flohsamenschalen oder großen Ballaststoff-Mengen."
+      }
+    ]
+  }
+}
